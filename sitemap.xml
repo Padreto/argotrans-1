@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-sofia/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-sofia/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-ceni/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-ceni/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/uslugi/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/uslugi/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/kontakti/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/kontakti/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-mladost/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-mladost/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-lyulin/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-lyulin/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-studentski/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-studentski/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-kamion/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-kamion/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argotrans-putnapomosht.com/putna-pomosht-motor/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/putna-pomosht-motor/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
