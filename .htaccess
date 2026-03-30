@@ -11,12 +11,12 @@ RewriteEngine On
 RewriteRule ^index\.html$ / [L,R=301]
 RewriteRule ^putna-pomosht-sofia\.html$ /putna-pomosht-sofia/ [L,R=301]
 RewriteRule ^putna-pomosht-ceni\.html$ /putna-pomosht-ceni/ [L,R=301]
-RewriteRule ^transportni-uslugi\.html$ /uslugi/ [L,R=301]
+RewriteRule ^transportni-uslugi\.html$ /transportni-uslugi/ [L,R=301]
 RewriteRule ^contacts\.html$ /kontakti/ [L,R=301]
 
 # ─── Old canonical redirects ────────────────────────────────────────────
 RewriteRule ^contacts/?$ /kontakti/ [L,R=301]
-RewriteRule ^transportni-uslugi/?$ /uslugi/ [L,R=301]
+RewriteRule ^uslugi/?$ /transportni-uslugi/ [L,R=301]
 
 # ─── Clean URL routing: serve index.html from subdirectories ───────────
 RewriteCond %{REQUEST_FILENAME} !-f
