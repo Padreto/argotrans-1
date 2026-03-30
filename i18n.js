@@ -17,7 +17,7 @@
     bg: {
 
       /* Urgency banner (4× repeated via JS) */
-      'banner.content': '<i class="fas fa-exclamation-triangle" style="color:#ffc800" aria-hidden="true"></i> Пътна Помощ 24/7 &nbsp;|&nbsp; <span class="banner-phone">Обади се сега: 0988 885 462 &nbsp;|&nbsp;</span> Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
+      'banner.content': 'Пътна Помощ 24/7 &nbsp;|&nbsp; <span class="banner-phone">Обади се сега: 0988 885 462 &nbsp;|&nbsp;</span> Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Пътна Помощ',
@@ -206,7 +206,7 @@
     en: {
 
       /* Urgency banner */
-      'banner.content': '<i class="fas fa-exclamation-triangle" style="color:#ffc800" aria-hidden="true"></i> Roadside Assistance 24/7 &nbsp;|&nbsp; <span class="banner-phone">Call now: 0988 885 462 &nbsp;|&nbsp;</span> Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
+      'banner.content': 'Roadside Assistance 24/7 &nbsp;|&nbsp; <span class="banner-phone">Call now: 0988 885 462 &nbsp;|&nbsp;</span> Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Roadside Assistance',
