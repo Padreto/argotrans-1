@@ -1126,11 +1126,16 @@ img { max-width: 100%; height: auto; }
   border-radius: 8px;
   cursor: pointer;
   background: #141414;
+}
+
+/* Only hide items for animation when JS is loaded */
+.js-ready .bento-item {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.js-ready .bento-item.in-view,
 .bento-item.in-view {
   opacity: 1;
   transform: translateY(0);
@@ -2272,45 +2277,50 @@ img { max-width: 100%; height: auto; }
 /* ================================================
    SCROLL REVEAL — Generic
    ================================================ */
-.reveal {
+/* Only animate when JS is loaded */
+.js-ready .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.js-ready .reveal.reveal-visible,
 .reveal.reveal-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.reveal-left {
+.js-ready .reveal-left {
   opacity: 0;
   transform: translateX(-32px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.js-ready .reveal-left.reveal-visible,
 .reveal-left.reveal-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.reveal-right {
+.js-ready .reveal-right {
   opacity: 0;
   transform: translateX(32px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.js-ready .reveal-right.reveal-visible,
 .reveal-right.reveal-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.reveal-scale {
+.js-ready .reveal-scale {
   opacity: 0;
   transform: scale(0.92);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+.js-ready .reveal-scale.reveal-visible,
 .reveal-scale.reveal-visible {
   opacity: 1;
   transform: scale(1);
