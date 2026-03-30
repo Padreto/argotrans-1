@@ -15,7 +15,8 @@
       "Bash(done)",
       "Bash(head -3 grep -n \"<meta name=\"\"description\"\"\" \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Cloude Projects\\\\argotrans-1\\\\uslugi\\\\index.html\")",
       "Bash(\"c:/Users/Admin/Desktop/Cloude Projects/argotrans-1/uslugi/index.html\":*)",
-      "Bash(grep -l \"main-nav\\\\|class=\"\"hamburger\"\"\" \"c:/Users/Admin/Desktop/Cloude Projects/argotrans-1/\"**/index.html)"
+      "Bash(grep -l \"main-nav\\\\|class=\"\"hamburger\"\"\" \"c:/Users/Admin/Desktop/Cloude Projects/argotrans-1/\"**/index.html)",
+      "Bash(head -2 grep \"style.css\\\\|i18n.js\\\\|interactive.js\" \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Cloude Projects\\\\argotrans-1\\\\putna-pomosht-sofia.html\")"
     ]
   }
 }
