@@ -17,7 +17,7 @@
     bg: {
 
       /* Urgency banner (4× repeated via JS) */
-      'banner.content': '&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: 0988 885 462 &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
+      'banner.content': '<i class="fas fa-exclamation-triangle" style="color:#ffc800" aria-hidden="true"></i> Пътна Помощ 24/7 &nbsp;|&nbsp; <span class="banner-phone">Обади се сега: 0988 885 462 &nbsp;|&nbsp;</span> Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Пътна Помощ',
@@ -52,7 +52,7 @@
       /* Emergency modal */
       'modal.title':   'Нужна ви е пътна помощ сега?',
       'modal.text':    'Екипът ни е на линия 24/7 и пристига до 30 минути в София.',
-      'modal.btn':     '<i class="fa-solid fa-phone" aria-hidden="true"></i> ОБАДИ СЕ: 0988 885 462',
+      'modal.btn':     '<i class="fa-solid fa-phone" aria-hidden="true"></i> ОБАДИ СЕ',
       'modal.dismiss': 'Не, благодаря',
 
       /* ---- HOMEPAGE ---- */
@@ -62,7 +62,7 @@
       'hero.chip1':    '<i class="fa-solid fa-bolt" aria-hidden="true"></i> до 30 мин',
       'hero.chip2':    'от 45€',
       'hero.chip3':    'ЧМР 50 000€',
-      'hero.cta':      '<i class="fa-solid fa-phone" aria-hidden="true"></i> ПОЗВЪНИ ВЕДНАГА — 0988 885 462',
+      'hero.cta':      '<i class="fa-solid fa-phone" aria-hidden="true"></i> ПОЗВЪНИ ВЕДНАГА',
       'hero.feat1':    'Застрахован превоз',
       'hero.feat2':    '30 мин реакция',
       'hero.feat3':    'Цяла България',
@@ -107,7 +107,7 @@
 
       'cta.h2':  'НУЖДА ОТ ПЪТНА ПОМОЩ?',
       'cta.p':   'Не губете време. Екипът на Argotrans е готов да тръгне към вас веднага.',
-      'cta.btn': '<i class="fa-solid fa-phone" aria-hidden="true"></i> ПОЗВЪНИ СЕГА — 0988 885 462',
+      'cta.btn': '<i class="fa-solid fa-phone" aria-hidden="true"></i> ПОЗВЪНИ СЕГА',
       'cta.meta':'<span>&#10003; 24/7</span><span>&#10003; От 45€</span><span>&#10003; ЧМР Застраховка 50 000€</span>',
 
       'about.eyebrow': 'За нас',
@@ -137,7 +137,7 @@
       'sofia.hero.eyebrow': 'ДЕНОНОЩНА ПЪТНА ПОМОЩ',
       'sofia.hero.h1':      'ПЪТНА ПОМОЩ СОФИЯ',
       'sofia.hero.sub':     'Репатрак 24/7 · от 45€ · ЧМР застраховка 50 000€',
-      'sofia.hero.cta':     '<i class="fa-solid fa-phone"></i> 0988 885 462',
+      'sofia.hero.cta':     '<i class="fa-solid fa-phone"></i> Обади се',
       'sofia.about.eyebrow':'За услугата',
       'sofia.about.h2':     'Пътна Помощ в София — Бърза Реакция 24/7',
       'sofia.about.body':   '<p>Арготранс предоставя <strong>денонощна пътна помощ в София</strong> — 24/7, включително събота, неделя и официални празници. Нашият репатрак е готов да тръгне към вас в рамките на <strong>30 минути</strong> от обаждането.</p><p>Обслужваме всички квартали на София — Младост, Люлин, Студентски, Надежда, Лозенец, Витоша и още десетки адреси в града и покрайнините. Всяко пътно средство се репатрира с <strong>ЧМР застраховка до 50 000 евро</strong>.</p>',
@@ -192,7 +192,7 @@
       'lp.price.eyebrow':'ТАРИФА',
       'lp.cta.h2':      'Нужда от пътна помощ точно сега?',
       'lp.cta.p':       'Не губете ценно време. Нашият екип е готов.',
-      'lp.cta.btn':     '<i class="fa-solid fa-phone"></i> ПОЗВЪНИ — 0988 885 462',
+      'lp.cta.btn':     '<i class="fa-solid fa-phone"></i> ПОЗВЪНИ',
       'lp.faq.eyebrow': 'Чести въпроси',
 
       /* Breadcrumb shared */
@@ -206,7 +206,7 @@
     en: {
 
       /* Urgency banner */
-      'banner.content': '&#128680; Roadside Assistance 24/7 &nbsp;|&nbsp; Call now: 0988 885 462 &nbsp;|&nbsp; Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
+      'banner.content': '<i class="fas fa-exclamation-triangle" style="color:#ffc800" aria-hidden="true"></i> Roadside Assistance 24/7 &nbsp;|&nbsp; <span class="banner-phone">Call now: 0988 885 462 &nbsp;|&nbsp;</span> Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Roadside Assistance',
@@ -241,7 +241,7 @@
       /* Emergency modal */
       'modal.title':   'Do you need roadside assistance right now?',
       'modal.text':    'Our team is available 24/7 and arrives within 30 minutes in Sofia.',
-      'modal.btn':     '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL: 0988 885 462',
+      'modal.btn':     '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL NOW',
       'modal.dismiss': 'No, thank you',
 
       /* ---- HOMEPAGE ---- */
@@ -251,7 +251,7 @@
       'hero.chip1':    '<i class="fa-solid fa-bolt" aria-hidden="true"></i> within 30 min',
       'hero.chip2':    'from &euro;45',
       'hero.chip3':    'CMR &euro;50,000',
-      'hero.cta':      '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL NOW — 0988 885 462',
+      'hero.cta':      '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL NOW',
       'hero.feat1':    'Insured transport',
       'hero.feat2':    '30 min response',
       'hero.feat3':    'All of Bulgaria',
@@ -296,7 +296,7 @@
 
       'cta.h2':  'NEED ROADSIDE ASSISTANCE?',
       'cta.p':   'Don\'t waste time. The Argotrans team is ready to come to you immediately.',
-      'cta.btn': '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL NOW — 0988 885 462',
+      'cta.btn': '<i class="fa-solid fa-phone" aria-hidden="true"></i> CALL NOW',
       'cta.meta':'<span>&#10003; 24/7</span><span>&#10003; From &euro;45</span><span>&#10003; CMR Insurance &euro;50,000</span>',
 
       'about.eyebrow': 'About Us',
@@ -326,7 +326,7 @@
       'sofia.hero.eyebrow': '24/7 ROADSIDE ASSISTANCE',
       'sofia.hero.h1':      'ROADSIDE ASSISTANCE SOFIA',
       'sofia.hero.sub':     'Tow truck 24/7 · from €45 · CMR insurance €50,000',
-      'sofia.hero.cta':     '<i class="fa-solid fa-phone"></i> 0988 885 462',
+      'sofia.hero.cta':     '<i class="fa-solid fa-phone"></i> Обади се',
       'sofia.about.eyebrow':'About the service',
       'sofia.about.h2':     'Roadside Assistance in Sofia — Fast Response 24/7',
       'sofia.about.body':   '<p>Argotrans provides <strong>24/7 roadside assistance in Sofia</strong> — including Saturdays, Sundays and public holidays. Our tow truck is ready to reach you within <strong>30 minutes</strong> of your call.</p><p>We serve all neighbourhoods in Sofia — Mladost, Lyulin, Studentski, Nadezhda, Lozenets, Vitosha and dozens of other addresses in the city and surroundings. Every vehicle is towed with <strong>CMR insurance up to €50,000</strong>.</p>',
@@ -381,7 +381,7 @@
       'lp.price.eyebrow':'TARIFF',
       'lp.cta.h2':      'Need roadside assistance right now?',
       'lp.cta.p':       'Don\'t waste precious time. Our team is ready.',
-      'lp.cta.btn':     '<i class="fa-solid fa-phone"></i> CALL — 0988 885 462',
+      'lp.cta.btn':     '<i class="fa-solid fa-phone"></i> CALL NOW',
       'lp.faq.eyebrow': 'Frequently Asked Questions',
 
       /* Breadcrumb shared */

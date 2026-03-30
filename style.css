@@ -104,6 +104,10 @@ img { max-width: 100%; height: auto; }
   vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  .banner-phone { display: none; }
+}
+
 .urgency-banner-track {
   display: inline-flex;
   white-space: nowrap;
