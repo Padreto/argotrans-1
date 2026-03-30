@@ -880,127 +880,7 @@
     /* ============================================================
        SECTION 6 — GALLERY + CTA CARD
        ============================================================ */
-    .gallery-section {
-      background: #111;
-      padding: 100px 0;
-      overflow: hidden;
-    }
 
-    .gallery-asymmetric {
-      display: grid;
-      grid-template-columns: 60fr 40fr;
-      gap: 16px;
-      min-height: 480px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .gallery-asymmetric.in-view { opacity: 1; transform: translateY(0); }
-
-    .gallery-main-img {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-    }
-    .gallery-main-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .gallery-main-img:hover img { transform: scale(1.04); }
-
-    .gallery-caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 20px 22px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.78));
-      transform: translateY(100%);
-      transition: transform 0.35s ease;
-    }
-    .gallery-main-img:hover .gallery-caption,
-    .gallery-secondary-img:hover .gallery-caption { transform: translateY(0); }
-
-    .gallery-caption span {
-      font-family: var(--font-body);
-      font-size: 13px;
-      color: #d1d5db;
-      letter-spacing: 0.3px;
-    }
-
-    .gallery-right-col {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .gallery-secondary-img {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-      flex: 1;
-    }
-    .gallery-secondary-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .gallery-secondary-img:hover img { transform: scale(1.04); }
-
-    .gallery-cta-card {
-      background: var(--yellow);
-      border-radius: 4px;
-      padding: 28px 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-    .gallery-cta-card strong {
-      font-family: var(--font-heading);
-      font-size: 22px;
-      color: #0a0a0a;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      display: block;
-      padding-bottom: 0;
-    }
-    .gallery-cta-card span {
-      font-family: var(--font-body);
-      font-size: 14px;
-      color: #1a1400;
-      display: block;
-      margin-bottom: 6px;
-    }
-    .gallery-cta-phone {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: #0a0a0a;
-      color: var(--yellow);
-      font-family: var(--font-heading);
-      font-size: 17px;
-      letter-spacing: 0.5px;
-      padding: 13px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-    .gallery-cta-phone:hover { background: #1a1a1a; color: var(--yellow); }
-
-    @media (max-width: 768px) {
-      .gallery-asymmetric {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-      .gallery-main-img { min-height: 260px; }
-      .gallery-secondary-img { min-height: 200px; }
-    }
 
     /* ============================================================
        SECTION 7 — FINAL CTA WITH ROAD ANIMATION
@@ -1531,50 +1411,45 @@
 <!-- ============================================================
      SECTION 6 — GALLERY + CTA CARD
      ============================================================ -->
-<section class="gallery-section" aria-labelledby="gallery-title">
+<section class="bento-section" aria-label="Техника в действие">
   <div class="container">
-    <span class="section-label-tag">ТЕХНИКА В ДЕЙСТВИЕ</span>
-    <h2 class="tu-section-title" id="gallery-title">Нашата техника <span>в действие</span></h2>
-
-    <div class="gallery-asymmetric">
-
-      <div class="gallery-main-img">
-        <img
-          src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/02/tehnika-platforma-sofia-4-1024x768.jpg"
-          alt="Платформа за техника и машини – Арготранс"
-          loading="lazy"
-          width="1024"
-          height="768"
-        />
-        <div class="gallery-caption">
-          <span>Платформа за техника</span>
-        </div>
+    <div class="bento-header">
+      <span class="section-label">ТЕХНИКА В ДЕЙСТВИЕ</span>
+      <h2>Нашата техника <span>в действие</span></h2>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-item featured" data-lb="../images/prevoz/prevoz-tovari-1.jpg">
+        <img src="../images/prevoz/prevoz-tovari-1.jpg" alt="Превоз на товари с платформа – Арготранс" loading="lazy" width="800" height="600" />
+        <div class="bento-caption"><span class="caption-tag">Транспорт</span><p>Превоз на тежки товари</p></div>
       </div>
-
-      <div class="gallery-right-col">
-        <div class="gallery-secondary-img">
-          <img
-            src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/02/patna-pomosht-24-7-sofia-5-1024x768.jpg"
-            alt="Транспортни услуги 24/7 – Арготранс"
-            loading="lazy"
-            width="1024"
-            height="768"
-          />
-          <div class="gallery-caption">
-            <span>Транспорт 24/7</span>
-          </div>
-        </div>
-
-        <div class="gallery-cta-card">
-          <strong>Готови за вашия товар</strong>
-          <span>Обадете се за оферта</span>
-          <a href="tel:+359988885462" class="gallery-cta-phone" aria-label="Обади се на 0988 885 462">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-            0988 885 462
-          </a>
-        </div>
+      <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-2.jpg">
+        <img src="../images/prevoz/prevoz-tovari-2.jpg" alt="Транспорт на техника" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Техника</span><p>Специализиран превоз</p></div>
       </div>
-
+      <div class="bento-item" data-lb="../images/prevoz/tehnika-platforma-sofia-4.jpg">
+        <img src="../images/prevoz/tehnika-platforma-sofia-4.jpg" alt="Платформа за техника София" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Платформа</span><p>До 7 тона товароносимост</p></div>
+      </div>
+      <div class="bento-item wide" data-lb="../images/prevoz/prevoz-tovari-3.jpg">
+        <img src="../images/prevoz/prevoz-tovari-3.jpg" alt="Превоз на машини" loading="lazy" width="800" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Машини</span><p>Безопасен транспорт на машини</p></div>
+      </div>
+      <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-4.jpg">
+        <img src="../images/prevoz/prevoz-tovari-4.jpg" alt="Превоз на товари" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Товари</span><p>Професионален превоз</p></div>
+      </div>
+      <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-5.jpg">
+        <img src="../images/prevoz/prevoz-tovari-5.jpg" alt="Транспорт на товари" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">24/7</span><p>Денонощно обслужване</p></div>
+      </div>
+      <div class="bento-item wide" data-lb="../images/prevoz/prevoz-tovari-6.jpg">
+        <img src="../images/prevoz/prevoz-tovari-6.jpg" alt="Арготранс транспортни услуги" loading="lazy" width="800" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Арготранс</span><p>Надежден партньор</p></div>
+      </div>
+      <div class="bento-item" data-lb="../images/prevoz/putna-pomosht-sofia-314.jpg">
+        <img src="../images/prevoz/putna-pomosht-sofia-314.jpg" alt="Пътна помощ София" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Репатрак</span><p>Бързо репатриране</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1617,55 +1492,6 @@
   </div>
 </section>
 
-
-<!-- GALLERY -->
-<section class="gallery-section section" aria-label="Галерия">
-  <div class="container">
-    <p class="section-eyebrow">Галерия</p>
-    <h2 class="section-heading">НАШАТА РАБОТА</h2>
-    <div class="gallery-grid" id="galleryGrid">
-      <a href="../images/prevoz/prevoz-tovari-1.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-1.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/prevoz-tovari-2.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-2.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/prevoz-tovari-3.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-3.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/prevoz-tovari-4.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-4.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/prevoz-tovari-5.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-5.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/prevoz-tovari-6.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/prevoz-tovari-6.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/putna-pomosht-sofia-314.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/putna-pomosht-sofia-314.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/tehnika-platforma-sofia-4.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/tehnika-platforma-sofia-4.jpg" alt="Техника на платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/viber_image_2026-02-22_12-22-10-419.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/viber_image_2026-02-22_12-22-10-419.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/viber_image_2026-02-22_12-22-10-648.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/viber_image_2026-02-22_12-22-10-648.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/viber_image_2026-02-22_12-24-04-697.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/viber_image_2026-02-22_12-24-04-697.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/viber_image_2026-02-22_12-37-58-440.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/viber_image_2026-02-22_12-37-58-440.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-      <a href="../images/prevoz/viber_image_2026-02-22_12-37-58-857.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/prevoz/viber_image_2026-02-22_12-37-58-857.jpg" alt="Превоз на товари с платформа" loading="lazy" />
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -1845,13 +1671,6 @@
     observe('.pillar-card', function (el) {
       el.classList.add('in-view');
     }, { threshold: 0.15 });
-
-    /* -------------------------------------------------------
-       SECTION 6 — GALLERY (fade-up)
-       ------------------------------------------------------- */
-    observe('.gallery-asymmetric', function (el) {
-      el.classList.add('in-view');
-    }, { threshold: 0.1 });
 
     /* -------------------------------------------------------
        SECTION 7 — FINAL CTA (staggered reveal)

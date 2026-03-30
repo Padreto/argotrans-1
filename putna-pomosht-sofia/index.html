@@ -963,95 +963,7 @@
     /* ============================================================
        SECTION 6 — ASYMMETRIC PHOTO GALLERY
        ============================================================ */
-    .gallery-section {
-      background: var(--dark-bg);
-      padding: 90px 0;
-    }
 
-    .gallery-asymmetric {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 280px 220px;
-      gap: 16px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 700px) {
-      .gallery-asymmetric {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-      }
-    }
-
-    .gallery-photo {
-      position: relative;
-      overflow: hidden;
-      border-radius: 14px;
-      opacity: 0;
-      transform: scale(0.96);
-      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1);
-    }
-    .gallery-photo.in-view { opacity: 1; transform: scale(1); }
-    .gallery-photo:nth-child(2) { transition-delay: 0.12s; }
-    .gallery-photo:nth-child(3) { transition-delay: 0.22s; }
-    .gallery-photo:nth-child(4) { transition-delay: 0.32s; }
-
-    /* First image spans full left column height */
-    .gallery-photo.tall {
-      grid-row: 1 / 3;
-    }
-
-    .gallery-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
-    }
-
-    .gallery-photo:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Caption overlay */
-    .photo-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
-      padding: 28px 20px 18px;
-      transform: translateY(100%);
-      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-    }
-
-    .gallery-photo:hover .photo-caption {
-      transform: translateY(0);
-    }
-
-    .photo-caption-text {
-      font-family: var(--font-heading);
-      font-size: 16px;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding-bottom: 0;
-      margin: 0;
-    }
-
-    /* Permanent subtle dark overlay */
-    .gallery-photo::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.15);
-      z-index: 1;
-      transition: background 0.3s ease;
-    }
-    .gallery-photo:hover::before {
-      background: rgba(0,0,0,0.08);
-    }
 
     .photo-caption { z-index: 2; }
 
@@ -1639,54 +1551,36 @@
 <!-- ================================================
      SECTION 6 — ASYMMETRIC PHOTO GALLERY
      ================================================ -->
-<section class="gallery-section" aria-labelledby="galleryTitle">
+<section class="bento-section" aria-label="Галерия">
   <div class="container">
-    <p class="section-label">Нашата техника</p>
-    <h2 class="section-title" id="galleryTitle">Работим с <span>професионална</span> техника</h2>
-
-    <div class="gallery-asymmetric">
-      <div class="gallery-photo tall">
-        <img
-          src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/02/repatrirane-avtomobil-sofia-2-1-1024x768.jpg"
-          alt="Репатриране на автомобил в София – Арготранс"
-          loading="lazy"
-        />
-        <div class="photo-caption">
-          <p class="photo-caption-text">Репатриране в София</p>
-        </div>
+    <div class="bento-header">
+      <span class="section-label">Нашата техника</span>
+      <h2>Работим с <span>професионална</span> техника</h2>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-item featured" data-lb="../images/putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg">
+        <img src="../images/putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg" alt="Репатриране на автомобил в София" loading="lazy" width="800" height="600" />
+        <div class="bento-caption"><span class="caption-tag">Репатриране</span><p>Професионално репатриране в София</p></div>
       </div>
-
-      <div class="gallery-photo">
-        <img
-          src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/02/tehnika-platforma-sofia-4-1024x768.jpg"
-          alt="Платформа за транспорт на техника в София"
-          loading="lazy"
-        />
-        <div class="photo-caption">
-          <p class="photo-caption-text">Платформа за техника</p>
-        </div>
+      <div class="bento-item" data-lb="../images/putna-pomosht/repatrirane-avtomobil-sofia-2.jpg">
+        <img src="../images/putna-pomosht/repatrirane-avtomobil-sofia-2.jpg" alt="Репатриране автомобил София" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">София</span><p>Бързо пристигане</p></div>
       </div>
-
-      <div class="gallery-photo">
-        <img
-          src="../images/putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg"
-          alt="Пътна помощ репатриране София"
-          loading="lazy"
-        />
-        <div class="photo-caption">
-          <p class="photo-caption-text">Пътна помощ 24/7</p>
-        </div>
+      <div class="bento-item" data-lb="../images/putna-pomosht/putna-pomosht-sofia-02.jpg">
+        <img src="../images/putna-pomosht/putna-pomosht-sofia-02.jpg" alt="Пътна помощ София" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Пътна помощ</span><p>Реакция до 30 мин</p></div>
       </div>
-
-      <div class="gallery-photo">
-        <img
-          src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/02/viber_image_2026-02-22_12-24-05-332-1024x768.jpg"
-          alt="Арготранс пътна помощ 24/7 София"
-          loading="lazy"
-        />
-        <div class="photo-caption">
-          <p class="photo-caption-text">Бърза реакция</p>
-        </div>
+      <div class="bento-item wide" data-lb="../images/putna-pomosht/putna-pomosht-sofia-06.jpg">
+        <img src="../images/putna-pomosht/putna-pomosht-sofia-06.jpg" alt="Пътна помощ на магистрала" loading="lazy" width="800" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Магистрала</span><p>Помощ навсякъде по пътя</p></div>
+      </div>
+      <div class="bento-item" data-lb="../images/putna-pomosht/putna-pomosht-sofia-311.jpg">
+        <img src="../images/putna-pomosht/putna-pomosht-sofia-311.jpg" alt="Арготранс репатрак" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">Репатрак</span><p>Модерна платформа</p></div>
+      </div>
+      <div class="bento-item" data-lb="../images/putna-pomosht/putna-pomosht-sofia-312.jpg">
+        <img src="../images/putna-pomosht/putna-pomosht-sofia-312.jpg" alt="Пътна помощ репатриране" loading="lazy" width="400" height="300" />
+        <div class="bento-caption"><span class="caption-tag">24/7</span><p>Денонощно обслужване</p></div>
       </div>
     </div>
   </div>
@@ -1785,51 +1679,6 @@
 </section>
 
 
-<!-- GALLERY -->
-<section class="gallery-section section" aria-label="Галерия">
-  <div class="container">
-    <p class="section-eyebrow">Галерия</p>
-    <h2 class="section-heading">НАШАТА РАБОТА</h2>
-    <div class="gallery-grid" id="galleryGrid">
-      <a href="../images/putna-pomosht/putna-pomosht-sofia-04.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofia-04.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomosht-sofia-07.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofia-07.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomosht-sofia-09.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofia-09.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomosht-sofia-313.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofia-313.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomoht-sofia-315.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomoht-sofia-315.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg" alt="Пътна помощ София – репатриране" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/transport-busove-do-7-tona-.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/transport-busove-do-7-tona-.jpg" alt="Транспорт на бусове до 7 тона" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/2.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/2.jpg" alt="Пътна помощ София" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/3.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/3.jpg" alt="Пътна помощ София" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/4.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/4.jpg" alt="Пътна помощ София" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/patna-pomosht-24-7-sofia-5.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/patna-pomosht-24-7-sofia-5.jpg" alt="Денонощна пътна помощ София" loading="lazy" />
-      </a>
-      <a href="../images/putna-pomosht/putna-pomosht-sofiq-denonoshtna.jpg" class="gallery-item" data-lightbox>
-        <img src="../images/putna-pomosht/putna-pomosht-sofiq-denonoshtna.jpg" alt="Денонощна пътна помощ" loading="lazy" />
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
