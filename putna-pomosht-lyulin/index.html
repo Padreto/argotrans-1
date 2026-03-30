@@ -106,40 +106,60 @@
 </head>
 <body data-page="lyulin">
 
-  <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="header-inner">
-      <a href="/" class="logo-link" aria-label="Арго Транс — Начало">
-        <img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Argotrans пътна помощ" width="200" height="60" />
+<div class="urgency-banner" role="banner" aria-label="Спешна информация">
+  <div class="urgency-banner-track" aria-hidden="true">
+    <span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <a href="/" aria-label="Argotrans начална страница">
+        <img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Пътна помощ София – Арготранс лого" title="Argotrans – Пътна Помощ" width="200" height="60" />
       </a>
-      <nav class="main-nav" aria-label="Главна навигация">
-        <ul>
-          <li><a href="/" data-i18n="nav.home">Начало</a></li>
-          <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-          <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
-          <li><a href="/transportni-uslugi/">Услуги</a></li>
-          <li><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
-        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
-        </ul>
-      </nav>
-      <a href="tel:+359988885462" class="header-cta">0988 885 462</a>
-      <button id="langSwitch" aria-label="Switch language">EN</button>
-      <button class="hamburger" aria-label="Отвори меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </header>
+    <nav class="header-nav" aria-label="Главна навигация">
+      <ul class="main-menu">
+        <li><a href="/" data-i18n="nav.home">Пътна Помощ</a></li>
+        <li><a href="/transportni-uslugi/" data-i18n="nav.transport">Транспортни Услуги</a></li>
+        <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
+        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">0988 885 462</a>
+      <button id="langSwitch" aria-label="Switch language">EN</button>
+    </div>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Отвори меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-  <!-- Breadcrumbs -->
-  <nav aria-label="Навигация" class="breadcrumb-bar">
-    <ol class="breadcrumb">
-      <li><a href="/" data-i18n="nav.home">Начало</a></li>
-      <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-      <li aria-current="page">Пътна помощ Люлин</li>
-    </ol>
-  </nav>
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Мобилна навигация">
+  <div class="mobile-menu-header">
+    <div class="mm-logo">
+      <a href="/"><img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Арготранс лого" height="42" /></a>
+    </div>
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Затвори меню">&#10005;</button>
+  </div>
+  <ul class="mobile-nav-list">
+    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span><span data-i18n="mnav.home">Начало</span></a></li>
+    <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span><span data-i18n="mnav.sofia">Пътна Помощ София</span></a></li>
+    <li><a href="/transportni-uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span><span data-i18n="mnav.transport">Транспортни Услуги</span></a></li>
+    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span><span data-i18n="mnav.prices">Цени</span></a></li>
+    <li><a href="/blog/"><span class="mn-icon"><i class="fas fa-newspaper"></i></span><span data-i18n="mnav.blog">Полезно</span></a></li>
+    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span><span data-i18n="mnav.contacts">Контакти</span></a></li>
+  </ul>
+  <div class="mobile-cta-wrap">
+    <span class="mm-cta-label" data-i18n="mnav.cta">Обадете се сега — 24/7</span>
+    <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;0988 885 462</a>
+  </div>
+</div>
 
-  <main>
+<main>
     <!-- Hero -->
     <section class="lp-hero">
       <div class="lp-hero-inner">
