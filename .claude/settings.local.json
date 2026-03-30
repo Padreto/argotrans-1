@@ -16,7 +16,16 @@
       "Bash(head -3 grep -n \"<meta name=\"\"description\"\"\" \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Cloude Projects\\\\argotrans-1\\\\uslugi\\\\index.html\")",
       "Bash(\"c:/Users/Admin/Desktop/Cloude Projects/argotrans-1/uslugi/index.html\":*)",
       "Bash(grep -l \"main-nav\\\\|class=\"\"hamburger\"\"\" \"c:/Users/Admin/Desktop/Cloude Projects/argotrans-1/\"**/index.html)",
-      "Bash(head -2 grep \"style.css\\\\|i18n.js\\\\|interactive.js\" \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Cloude Projects\\\\argotrans-1\\\\putna-pomosht-sofia.html\")"
+      "Bash(head -2 grep \"style.css\\\\|i18n.js\\\\|interactive.js\" \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Cloude Projects\\\\argotrans-1\\\\putna-pomosht-sofia.html\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(cd:*)",
+      "Bash(node -c \"C:/Users/Admin/Desktop/Cloude Projects/argotrans-1/interactive.js\")",
+      "Bash(node --check \"C:/Users/Admin/Desktop/Cloude Projects/argotrans-1/interactive.js\")",
+      "Bash(mv \"putna pomosht sofiq denonoshtna.jpg\" \"putna-pomosht-sofiq-denonoshtna.jpg\")",
+      "Bash(mv \"putna-pomosht-sofia-repatriране-1.jpg\" \"putna-pomosht-sofia-repatrirane-1.jpg\")",
+      "Bash(mv \"argotrans  logo.svg\" \"argotrans-logo.svg\")",
+      "Bash(mv \"argotrans favicon.svg\" \"argotrans-favicon.svg\")",
+      "Bash(find . -name \"*.html\" -exec sed -i -e 's|putna%20pomosht/putna%20pomosht%20sofiq%20denonoshtna\\\\.jpg|putna-pomosht/putna-pomosht-sofiq-denonoshtna.jpg|g' -e 's|putna%20pomosht/putna-pomosht-sofia-repatri%D1%80%D0%B0%D0%BD%D0%B5-1\\\\.jpg|putna-pomosht/putna-pomosht-sofia-repatrirane-1.jpg|g' -e 's|putna%20pomosht/|putna-pomosht/|g' -e 's|argotrans  logo\\\\.svg|argotrans-logo.svg|g' -e 's|argotrans favicon\\\\.svg|argotrans-favicon.svg|g' {} +)"
     ]
   }
 }
