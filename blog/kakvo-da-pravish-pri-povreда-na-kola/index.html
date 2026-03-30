@@ -238,14 +238,18 @@
       <a href="/" aria-label="Argotrans начало">
         <img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Argotrans пътна помощ София" width="200" height="60" />
       </a>
+      <div class="logo-badge">
+        <span class="logo-badge-chip">24/7</span>
+        <span class="logo-badge-sub">Денонощно</span>
+      </div>
     </div>
     <nav class="header-nav" aria-label="Главна навигация">
-                  <ul class="main-menu">
+      <ul class="main-menu">
         <li class="has-dropdown">
-          <a href="#" data-i18n="nav.services">Услуги</a>
+          <a href="#" data-i18n="nav.services">Услуги <i class="fas fa-chevron-down nav-chevron"></i></a>
           <ul class="sub-menu">
-            <li><a href="/putna-pomosht-sofia/" data-i18n="nav.sofia">Пътна Помощ София</a></li>
-            <li><a href="/transportni-uslugi/" data-i18n="nav.transport">Транспортни Услуги</a></li>
+            <li><a href="/putna-pomosht-sofia/" data-i18n="nav.sofia"><i class="fas fa-car-crash"></i> Пътна Помощ София</a></li>
+            <li><a href="/transportni-uslugi/" data-i18n="nav.transport"><i class="fas fa-truck"></i> Транспортни Услуги</a></li>
           </ul>
         </li>
         <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
@@ -254,8 +258,10 @@
       </ul>
     </nav>
     <div class="header-cta">
+      <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">
+        <i class="fas fa-phone-alt"></i> 0988 885 462
+      </a>
       <button id="langSwitch" aria-label="Switch language">EN</button>
-      <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">0988 885 462</a>
     </div>
     <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Отвори меню" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -263,7 +269,8 @@
   </div>
 </header>
 
-<!-- Mobile Menu -->
+<div class="mm-backdrop" id="mmBackdrop"></div>
+
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Мобилна навигация">
   <div class="mobile-menu-header">
     <div class="mm-logo">
@@ -271,7 +278,7 @@
     </div>
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Затвори меню">&#10005;</button>
   </div>
-      <ul class="mobile-nav-list">
+  <ul class="mobile-nav-list">
     <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span><span data-i18n="mnav.sofia">Пътна Помощ София</span></a></li>
     <li><a href="/transportni-uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span><span data-i18n="mnav.transport">Транспортни Услуги</span></a></li>
     <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span><span data-i18n="mnav.prices">Цени</span></a></li>
