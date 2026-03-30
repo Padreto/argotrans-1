@@ -17,7 +17,7 @@
     bg: {
 
       /* Urgency banner (4× repeated via JS) */
-      'banner.content': '&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
+      'banner.content': '&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: 0988 885 462 &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Пътна Помощ',
@@ -206,7 +206,7 @@
     en: {
 
       /* Urgency banner */
-      'banner.content': '&#128680; Roadside Assistance 24/7 &nbsp;|&nbsp; Call now: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
+      'banner.content': '&#128680; Roadside Assistance 24/7 &nbsp;|&nbsp; Call now: 0988 885 462 &nbsp;|&nbsp; Fast arrival &nbsp;|&nbsp; Roadside Assistance Sofia &nbsp;|&nbsp; Prices from &euro;45 &nbsp;|&nbsp; CMR insurance &euro;50,000 &nbsp;|&nbsp;',
 
       /* Desktop Nav */
       'nav.home':      'Roadside Assistance',
