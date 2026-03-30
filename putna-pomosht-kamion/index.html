@@ -107,7 +107,7 @@
     .highlight-box strong { color: var(--yellow); }
   </style>
 </head>
-<body>
+<body data-page="kamion">
 
   <!-- Header -->
   <header class="site-header" id="siteHeader">
@@ -117,14 +117,16 @@
       </a>
       <nav class="main-nav" aria-label="Главна навигация">
         <ul>
-          <li><a href="/">Начало</a></li>
+          <li><a href="/" data-i18n="nav.home">Начало</a></li>
           <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-          <li><a href="/putna-pomosht-ceni/">Цени</a></li>
+          <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
           <li><a href="/uslugi/">Услуги</a></li>
-          <li><a href="/kontakti/">Контакти</a></li>
+          <li><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
+        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
         </ul>
       </nav>
       <a href="tel:+359988885462" class="header-cta">0988 885 462</a>
+      <button id="langSwitch" aria-label="Switch language">EN</button>
       <button class="hamburger" aria-label="Отвори меню" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -134,7 +136,7 @@
   <!-- Breadcrumbs -->
   <nav aria-label="Навигация" class="breadcrumb-bar">
     <ol class="breadcrumb">
-      <li><a href="/">Начало</a></li>
+      <li><a href="/" data-i18n="nav.home">Начало</a></li>
       <li><a href="/uslugi/">Услуги</a></li>
       <li aria-current="page">Пътна помощ камион</li>
     </ol>
@@ -275,7 +277,7 @@
     <!-- FAQ -->
     <section class="lp-section lp-section-darker">
       <div class="lp-container">
-        <span class="lp-eyebrow">Чести въпроси</span>
+        <span class="lp-eyebrow" data-i18n="lp.faq.eyebrow">Чести въпроси</span>
         <h2 class="lp-h2">Въпроси за пътна помощ камион и бус</h2>
 
         <div class="faq-item">
@@ -321,7 +323,7 @@
         <h3>Услуги</h3>
         <ul>
           <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-          <li><a href="/putna-pomosht-ceni/">Цени</a></li>
+          <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
           <li><a href="/uslugi/">Транспортни услуги</a></li>
         </ul>
       </div>
@@ -349,6 +351,7 @@
     </div>
   </footer>
 
+  <script src="../i18n.js"></script>
   <script src="../interactive.js" defer></script>
 </body>
 </html>

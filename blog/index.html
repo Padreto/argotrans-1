@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="bg" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Полезно | Съвети и Информация | Арго Транс</title>
+  <meta name="description" content="Полезни статии и съвети за пътна помощ в София — какво да правиш при повреда, цени, разлика между репатрак и пътна помощ и още." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Argotrans" />
+
+  <link rel="canonical" href="https://argotrans-putnapomosht.com/blog/" />
+  <link rel="alternate" hreflang="bg" href="https://argotrans-putnapomosht.com/blog/" />
+
+  <meta property="og:title" content="Полезно | Арго Транс" />
+  <meta property="og:description" content="Полезни статии и съвети за пътна помощ в София — какво да правиш при повреда, цени, репатрак и още." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://argotrans-putnapomosht.com/blog/" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:site_name" content="Argotrans – Пътна Помощ" />
+
+  <link rel="icon" type="image/svg+xml" href="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Manrope:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Начало", "item": "https://argotrans-putnapomosht.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Полезно", "item": "https://argotrans-putnapomosht.com/blog/"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --yellow: #ffc800;
+      --dark-bg: #0a0a0a;
+      --font-heading: 'Oswald', sans-serif;
+      --font-body: 'Manrope', sans-serif;
+    }
+
+    .blog-hero {
+      background: var(--dark-bg);
+      padding: 120px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255,200,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blog-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .blog-eyebrow {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .blog-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+    .blog-hero h1 span { color: var(--yellow); }
+    .blog-hero p {
+      font-family: var(--font-body);
+      font-size: 17px;
+      color: #9ca3af;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .blog-section {
+      background: #0f0f0f;
+      padding: 60px 20px 80px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .blog-card {
+      background: #161616;
+      border: 1px solid #222;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--yellow);
+    }
+    .blog-card-icon {
+      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      padding: 36px 28px 28px;
+      font-size: 40px;
+      border-bottom: 1px solid #222;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .blog-card-icon .card-label {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--yellow);
+      text-transform: uppercase;
+    }
+    .blog-card-body {
+      padding: 24px 28px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-meta {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+    }
+    .blog-card h2 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: #7a7a7a;
+      line-height: 1.65;
+      margin: 0 0 20px;
+      flex: 1;
+    }
+    .blog-card-link {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .blog-card-link:hover { gap: 10px; }
+
+    .blog-cta-section {
+      background: var(--dark-bg);
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 1px solid #1a1a1a;
+    }
+    .blog-cta-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 40px);
+      color: #fff;
+      margin: 0 0 10px;
+    }
+    .blog-cta-section h2 span { color: var(--yellow); }
+    .blog-cta-section p {
+      font-family: var(--font-body);
+      color: #9ca3af;
+      font-size: 16px;
+      margin: 0 0 28px;
+    }
+    .blog-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--yellow);
+      color: #000;
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .blog-cta-btn:hover { opacity: 0.88; }
+
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- URGENCY BANNER -->
+<div class="urgency-banner" role="banner" aria-label="Спешна информация">
+  <div class="urgency-banner-track" aria-hidden="true">
+    <span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span><span>&#128680; Пътна Помощ 24/7 &nbsp;|&nbsp; Обади се сега: <a href="tel:+359988885462">0988 885 462</a> &nbsp;|&nbsp; Бързо пристигане &nbsp;|&nbsp; Пътна Помощ София &nbsp;|&nbsp; Пътна Помощ Цени от 45€ &nbsp;|&nbsp; ЧМР застраховка 50 000€ &nbsp;|&nbsp;</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <a href="/" aria-label="Argotrans начало">
+        <img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Argotrans пътна помощ София" width="200" height="60" />
+      </a>
+    </div>
+    <nav class="header-nav" aria-label="Главна навигация">
+      <ul class="main-menu">
+        <li><a href="/" data-i18n="nav.home">Пытна Помощ</a></li>
+        <li>
+          <a href="#" data-i18n="nav.services">Услуги</a>
+          <ul class="sub-menu">
+            <li><a href="/putna-pomosht-sofia/" data-i18n="nav.sofia">Пытна Помощ София</a></li>
+            <li><a href="/uslugi/" data-i18n="nav.transport">Транспортни Услуги</a></li>
+          </ul>
+        </li>
+        <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
+        <li class="active"><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
+        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <button id="langSwitch" aria-label="Switch language">EN</button>
+      <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">0988 885 462</a>
+    </div>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Отвори меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Мобилна навигация">
+  <div class="mobile-menu-header">
+    <div class="mm-logo">
+      <a href="/"><img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Арготранс лого" height="42" /></a>
+    </div>
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Затвори меню">&#10005;</button>
+  </div>
+  <ul class="mobile-nav-list">
+    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span><span data-i18n="mnav.home">Начало</span></a></li>
+    <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span><span data-i18n="mnav.sofia">Пытна Помощ София</span></a></li>
+    <li><a href="/uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span><span data-i18n="mnav.transport">Транспортни Услуги</span></a></li>
+    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span><span data-i18n="mnav.prices">Цени</span></a></li>
+    <li><a href="/blog/"><span class="mn-icon"><i class="fas fa-newspaper"></i></span><span data-i18n="mnav.blog">Полезно</span></a></li>
+    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span><span data-i18n="mnav.contacts">Контакти</span></a></li>
+  </ul>
+  <div class="mobile-cta-wrap">
+    <span class="mm-cta-label" data-i18n="mnav.cta">Обадете се сега — 24/7</span>
+    <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;0988 885 462</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<nav aria-label="Навигация" class="breadcrumb-bar">
+  <ol class="breadcrumb">
+    <li><a href="/" data-i18n="nav.home">Пытна Помощ</a></li>
+    <li aria-current="page" data-i18n="nav.blog">Полезно</li>
+  </ol>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <p class="blog-eyebrow">Полезна информация</p>
+    <h1>ПОЛЕЗНО ЗА <span>ПЪТНА ПОМОЩ</span></h1>
+    <p>Съвети, цени и полезна информация за шофьорите в София и страната.</p>
+  </div>
+</section>
+
+<!-- ARTICLES GRID -->
+<section class="blog-section">
+  <div class="blog-grid">
+
+    <!-- Card 1 -->
+    <article class="blog-card">
+      <div class="blog-card-icon">
+        <span>&#128663;</span>
+        <span class="card-label">Съвети</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Март 2026</span>
+          <span><i class="fas fa-clock"></i> 4 мин четене</span>
+        </div>
+        <h2>Какво да правиш при повреда на кола в София?</h2>
+        <p>Стъпка по стъпка: паркиране, сигнализиране, застраховка и кога да се обадиш за пътна помощ.</p>
+        <a href="/blog/kakvo-da-pravish-pri-povreда-na-kola/" class="blog-card-link">Прочети статията <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="blog-card">
+      <div class="blog-card-icon">
+        <span>&#128176;</span>
+        <span class="card-label">Цени</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Март 2026</span>
+          <span><i class="fas fa-clock"></i> 5 мин четене</span>
+        </div>
+        <h2>Колко струва пътна помощ в София? (Реални цени 2026)</h2>
+        <p>Пълно сравнение на цените — лек автомобил, джип, бус, извънградски транспорт и скрити такси.</p>
+        <a href="/blog/kolko-struva-putna-pomosht-sofia/" class="blog-card-link">Прочети статията <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="blog-card">
+      <div class="blog-card-icon">
+        <span>&#128665;</span>
+        <span class="card-label">Информация</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Март 2026</span>
+          <span><i class="fas fa-clock"></i> 3 мин четене</span>
+        </div>
+        <h2>Репатрак или пътна помощ — каква е разликата?</h2>
+        <p>Много хора объркват двете услуги. Обясняваме кога трябва репатрак и кога е достатъчна пътна помощ.</p>
+        <a href="/blog/repatrak-ili-putna-pomosht/" class="blog-card-link">Прочети статията <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="blog-card">
+      <div class="blog-card-icon">
+        <span>&#128737;</span>
+        <span class="card-label">Безопасност</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> Март 2026</span>
+          <span><i class="fas fa-clock"></i> 4 мин четене</span>
+        </div>
+        <h2>Топ 5 причини за спукана гума в градски условия</h2>
+        <p>Дупките не са единствената причина. Разкриваме петте най-чести фактора и как да се предпазиш.</p>
+        <a href="/blog/prichini-za-spukana-guma/" class="blog-card-link">Прочети статията <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="blog-cta-section">
+  <h2>Нужна ви е <span>пътна помощ</span> сега?</h2>
+  <p>Арготранс е на линия 24/7. Пристигаме до 30 минути в целия град.</p>
+  <a href="tel:+359988885462" class="blog-cta-btn">
+    <i class="fas fa-phone-alt"></i> 0988 885 462
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <a href="/" class="footer-logo">
+          <img src="https://argotrans-putnapomosht.com/wp-content/uploads/2026/03/argotrans-logo.svg" alt="Argotrans Пътна Помощ София" width="200" height="60" />
+        </a>
+        <p class="footer-desc" data-i18n="footer.desc">Лицензирана пытна помощ в София и страната. Надежден партньор за вашия автомобил, бус или камион.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.contacts">КОНТАКТИ</h4>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
+          <a href="tel:+359988885462">0988 885 462</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+          <span data-i18n="footer.location">София, България</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope icon" aria-hidden="true"></i>
+          <a href="mailto:argotrans10@abv.bg">argotrans10@abv.bg</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.services">УСЛУГИ</h4>
+        <ul class="footer-services-list">
+          <li><a href="/putna-pomosht-sofia/" data-i18n="footer.svc1">Пытна помощ София</a></li>
+          <li><a href="/uslugi/" data-i18n="footer.svc2">Транспорт до 7 тона</a></li>
+          <li><a href="/putna-pomosht-ceni/" data-i18n="footer.svc3">Пытна помощ цени</a></li>
+          <li><a href="https://argotrans10.mobile.bg/" target="_blank" rel="noopener" data-i18n="footer.svc4">Продажба на автомобили</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n="footer.copy">&copy; 2026 Argotrans. Всички права запазени.</p>
+      <p class="footer-credit" data-i18n="footer.credit">Уебсайт изработен от <a href="https://web-fabrika.com/" target="_blank" rel="noopener">WEB-FABRIKA</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CALL BUTTON -->
+<div class="floating-phone-btn" aria-label="Обади се за пътна помощ">
+  <a href="tel:+359988885462" aria-label="Позвъни за пътна помощ 0988 885 462">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+  </a>
+  <span class="floating-phone-label">0988 885 462</span>
+</div>
+
+<!-- EMERGENCY MODAL -->
+<div class="emergency-modal-overlay" id="emergencyModalOverlay" role="dialog" aria-modal="true" aria-labelledby="emergencyModalTitle">
+  <div class="emergency-modal">
+    <button class="emergency-modal-close-x" aria-label="Затвори">&times;</button>
+    <span class="emergency-modal-icon" aria-hidden="true">&#128680;</span>
+    <h3 id="emergencyModalTitle" data-i18n="modal.title">Нужна ви е пытна помощ сега?</h3>
+    <p data-i18n="modal.text">Екипът ни е на линия 24/7 и пристига до 30 минути в София.</p>
+    <a href="tel:+359988885462" class="emergency-modal-call" data-i18n="modal.btn">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> ОБАДИ СЕ: 0988 885 462
+    </a>
+    <br />
+    <button class="emergency-modal-dismiss" data-i18n="modal.dismiss">Не, благодаря</button>
+  </div>
+</div>
+
+<script src="../i18n.js"></script>
+<script src="../interactive.js"></script>
+</body>
+</html>

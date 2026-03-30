@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" prefix="og: https://ogp.me/ns#">
+<html lang="bg" prefix="og: https://ogp.me/ns#" id="html-root">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -913,7 +913,7 @@
     }
   </style>
 </head>
-<body>
+<body data-page="home">
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress-bar"></div>
@@ -950,23 +950,25 @@
     <nav class="header-nav" aria-label="Главна навигация">
       <ul class="main-menu">
         <li class="active">
-          <a href="/">Пътна Помощ</a>
+          <a href="/" data-i18n="nav.home">Пътна Помощ</a>
         </li>
         <li>
-          <a href="#">Услуги</a>
+          <a href="#" data-i18n="nav.services">Услуги</a>
           <ul class="sub-menu">
-            <li><a href="/putna-pomosht-sofia/">Пътна Помощ София</a></li>
-            <li><a href="/uslugi/">Транспортни Услуги</a></li>
+            <li><a href="/putna-pomosht-sofia/" data-i18n="nav.sofia">Пътна Помощ София</a></li>
+            <li><a href="/uslugi/" data-i18n="nav.transport">Транспортни Услуги</a></li>
           </ul>
         </li>
-        <li><a href="/putna-pomosht-ceni/">Цени</a></li>
-        <li><a href="/kontakti/">Контакти</a></li>
+        <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
+        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
       </ul>
     </nav>
 
-    <!-- CTA Button -->
+    <!-- CTA Button + Lang Switch -->
     <div class="header-cta">
       <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">0988 885 462</a>
+      <button id="langSwitch" aria-label="Switch language">EN</button>
     </div>
 
     <!-- Mobile Toggle -->
@@ -987,14 +989,15 @@
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Затвори меню">&#10005;</button>
   </div>
   <ul class="mobile-nav-list">
-    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span>Начало</a></li>
-    <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span>Пътна Помощ София</a></li>
-    <li><a href="/uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span>Транспортни Услуги</a></li>
-    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span>Цени</a></li>
-    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span>Контакти</a></li>
+    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span><span data-i18n="mnav.home">Начало</span></a></li>
+    <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span><span data-i18n="mnav.sofia">Пътна Помощ София</span></a></li>
+    <li><a href="/uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span><span data-i18n="mnav.transport">Транспортни Услуги</span></a></li>
+    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span><span data-i18n="mnav.prices">Цени</span></a></li>
+    <li><a href="/blog/"><span class="mn-icon"><i class="fas fa-newspaper"></i></span><span data-i18n="mnav.blog">Полезно</span></a></li>
+    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span><span data-i18n="mnav.contacts">Контакти</span></a></li>
   </ul>
   <div class="mobile-cta-wrap">
-    <span class="mm-cta-label">Обадете се сега — 24/7</span>
+    <span class="mm-cta-label" data-i18n="mnav.cta">Обадете се сега — 24/7</span>
     <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;0988 885 462</a>
   </div>
 </div>
@@ -1017,26 +1020,26 @@
     <!-- Status badge -->
     <div class="hp-hero-status">
       <span class="hp-hero-status-dot" aria-hidden="true"></span>
-      <span class="hp-hero-status-text">ДЕЖУРЕН ЕКИП — НАЛИЧЕН</span>
+      <span class="hp-hero-status-text" data-i18n="hero.status">ДЕЖУРЕН ЕКИП — НАЛИЧЕН</span>
     </div>
 
     <!-- H1 -->
-    <h1 class="hp-hero-h1">ПЪТНА ПОМОЩ СОФИЯ</h1>
+    <h1 class="hp-hero-h1" data-i18n="hero.h1">ПЪТНА ПОМОЩ СОФИЯ</h1>
     <span class="hp-hero-underline" aria-hidden="true"></span>
 
     <!-- Subtitle -->
-    <p class="hp-hero-subtitle">Бързо и сигурно репатриране до 7 тона.</p>
+    <p class="hp-hero-subtitle" data-i18n="hero.subtitle">Бързо и сигурно репатриране до 7 тона.</p>
 
     <!-- Fact chips -->
     <div class="hp-hero-chips" id="heroChips" aria-label="Ключови факти">
-      <span class="hp-hero-chip"><i class="fa-solid fa-bolt" aria-hidden="true"></i> до 30 мин</span>
-      <span class="hp-hero-chip">от 45€</span>
-      <span class="hp-hero-chip">ЧМР 50 000€</span>
+      <span class="hp-hero-chip" data-i18n="hero.chip1"><i class="fa-solid fa-bolt" aria-hidden="true"></i> до 30 мин</span>
+      <span class="hp-hero-chip" data-i18n="hero.chip2">от 45€</span>
+      <span class="hp-hero-chip" data-i18n="hero.chip3">ЧМР 50 000€</span>
     </div>
 
     <!-- CTA -->
     <div class="hp-hero-cta-wrap">
-      <a href="tel:+359988885462" class="hp-hero-cta-btn" aria-label="Позвъни за пътна помощ 0988 885 462">
+      <a href="tel:+359988885462" class="hp-hero-cta-btn" aria-label="Позвъни за пътна помощ 0988 885 462" data-i18n="hero.cta">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
         ПОЗВЪНИ ВЕДНАГА — 0988 885 462
       </a>
@@ -1046,19 +1049,19 @@
     <div class="hp-hero-features" aria-label="Предимства">
       <div class="hp-hero-feat">
         <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-        <span>Застрахован превоз</span>
+        <span data-i18n="hero.feat1">Застрахован превоз</span>
       </div>
       <div class="hp-hero-feat">
         <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-        <span>30 мин реакция</span>
+        <span data-i18n="hero.feat2">30 мин реакция</span>
       </div>
       <div class="hp-hero-feat">
         <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-        <span>Цяла България</span>
+        <span data-i18n="hero.feat3">Цяла България</span>
       </div>
       <div class="hp-hero-feat">
         <i class="fa-solid fa-truck" aria-hidden="true"></i>
-        <span>До 7 тона</span>
+        <span data-i18n="hero.feat4">До 7 тона</span>
       </div>
     </div>
 
@@ -1078,8 +1081,8 @@
   <div class="container">
 
     <div class="hp-services-header">
-      <span class="section-eyebrow">КАКВО ПРЕДЛАГАМЕ</span>
-      <h2 class="section-heading">Пътна Помощ и Репатриране в София — Нашите Услуги</h2>
+      <span class="section-eyebrow" data-i18n="svc.eyebrow">КАКВО ПРЕДЛАГАМЕ</span>
+      <h2 class="section-heading" data-i18n="svc.h2">Пътна Помощ и Репатриране в София — Нашите Услуги</h2>
     </div>
 
     <div class="hp-services-grid">
@@ -1087,44 +1090,44 @@
       <!-- Card 1 -->
       <div class="hp-service-card" data-delay="0">
         <div class="svc-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
-        <h3>Пътна помощ със застраховка</h3>
-        <p>Включена застраховка "Отговорност на превозвача" до <span class="highlight">50 000€</span> за всяко превозно средство.</p>
-        <a href="/putna-pomosht-sofia/" class="svc-link" aria-label="Научи повече за пътна помощ">Научи повече &rarr;</a>
+        <h3 data-i18n="svc.c1.h3">Пытна помощ със застраховка</h3>
+        <p data-i18n="svc.c1.p">Включена застраховка "Отговорност на превозвача" до <span class="highlight">50 000€</span> за всяко превозно средство.</p>
+        <a href="/putna-pomosht-sofia/" class="svc-link" data-i18n="svc.c1.link">Научи повече &rarr;</a>
       </div>
 
       <!-- Card 2 -->
       <div class="hp-service-card" data-delay="100">
         <div class="svc-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
-        <h3>Репатриране на автомобили</h3>
-        <p>Бързо преместване на леки и лекотоварни автомобили. <span class="highlight">Професионално отношение</span> към вашия автомобил.</p>
-        <a href="/uslugi/" class="svc-link" aria-label="Научи повече за репатриране">Научи повече &rarr;</a>
+        <h3 data-i18n="svc.c2.h3">Репатриране на автомобили</h3>
+        <p data-i18n="svc.c2.p">Бързо преместване на леки и лекотоварни автомобили. <span class="highlight">Професионално отношение</span> към вашия автомобил.</p>
+        <a href="/uslugi/" class="svc-link" data-i18n="svc.c2.link">Научи повече &rarr;</a>
       </div>
 
       <!-- Card 3 -->
       <div class="hp-service-card" data-delay="200">
         <div class="svc-icon"><i class="fa-solid fa-truck" aria-hidden="true"></i></div>
-        <h3>Тежкотоварен транспорт</h3>
-        <p>Специализирана платформа за машини, бусове и камиони до <span class="highlight">7 тона</span>. Сигурно укрепване.</p>
-        <a href="/uslugi/" class="svc-link" aria-label="Научи повече за тежкотоварен транспорт">Научи повече &rarr;</a>
+        <h3 data-i18n="svc.c3.h3">Тежкотоварен транспорт</h3>
+        <p data-i18n="svc.c3.p">Специализирана платформа за машини, бусове и камиони до <span class="highlight">7 тона</span>. Сигурно укрепване.</p>
+        <a href="/uslugi/" class="svc-link" data-i18n="svc.c3.link">Научи повече &rarr;</a>
       </div>
 
       <!-- Card 4 -->
       <div class="hp-service-card" data-delay="300">
         <div class="svc-icon"><i class="fa-solid fa-road" aria-hidden="true"></i></div>
-        <h3>Градско и Извънградско</h3>
-        <p>Покриваме София и цялата пътна мрежа на България. Фиксирани цени за дълги разстояния.</p>
-        <a href="/putna-pomosht-ceni/" class="svc-link" aria-label="Вижте цените">Вижте цените &rarr;</a>
+        <h3 data-i18n="svc.c4.h3">Градско и Извънградско</h3>
+        <p data-i18n="svc.c4.p">Покриваме София и цялата пытна мрежа на България. Фиксирани цени за дълги разстояния.</p>
+        <a href="/putna-pomosht-ceni/" class="svc-link" data-i18n="svc.c4.link">Вижте цените &rarr;</a>
       </div>
 
     </div>
 
     <!-- About paragraph -->
     <div class="hp-about-para">
-      <p>
-        Екипът на Арготранс – <a href="/putna-pomosht-sofia/" style="color:var(--yellow);">Пътна помощ София</a> предлага професионална и бърза помощ при аварии на пътя,
+      <p data-i18n="svc.para">
+        Екипът на Арготранс – <a href="/putna-pomosht-sofia/" style="color:var(--yellow);">Пытна помощ София</a> предлага професионална и бърза помощ при аварии на пытя,
         както в рамките на София, така и в цялата страна и чужбина. Работим денонощно 24/7 и реагираме
         незабавно при всяка ситуация. Предлагаме репатриране на леки автомобили, джипове, бусове, мотори
-        и специализирана техника до 7 тона. Вижте нашите <a href="/putna-pomosht-ceni/" style="color:var(--yellow);">пътна помощ цени</a> или се <a href="/kontakti/" style="color:var(--yellow);">свържете с нас</a>.
+        и специализирана техника до 7 тона. Вижте нашите <a href="/putna-pomosht-ceni/" style="color:var(--yellow);">пытна помощ цени</a> или се <a href="/kontakti/" style="color:var(--yellow);">свържете с нас</a>.
       </p>
     </div>
 
@@ -1138,8 +1141,8 @@
 <section class="carousel-section" id="galeria-slider" aria-label="Галерия – Нашата работа">
   <div class="container">
     <div class="carousel-section-header">
-      <span class="section-label">НАШАТА РАБОТА</span>
-      <h2 class="section-title" style="animation:none; display:inline-block;">ГАЛЕРИЯ</h2>
+      <span class="section-label" data-i18n="gallery.label">НАШАТА РАБОТА</span>
+      <h2 class="section-title" style="animation:none; display:inline-block;" data-i18n="gallery.h2">ГАЛЕРИЯ</h2>
     </div>
 
     <div style="position:relative;">
@@ -1190,8 +1193,8 @@
   <div class="container">
 
     <div class="hp-stats-header">
-      <span class="section-eyebrow">ПОКРИТИЕ И НАДЕЖДНОСТ</span>
-      <h2 class="section-heading">Пътна Помощ в София и Цяла България — Денонощно 24/7</h2>
+      <span class="section-eyebrow" data-i18n="stats.eyebrow">ПОКРИТИЕ И НАДЕЖДНОСТ</span>
+      <h2 class="section-heading" data-i18n="stats.h2">Пътна Помощ в София и Цяла България — Денонощно 24/7</h2>
       <p>
         Независимо дали сте закъсали на Околовръстното, в центъра на София или на магистрала Тракия,
         нашият екип пътува към вас.
@@ -1202,17 +1205,17 @@
 
   <div class="hp-stat-card" data-delay="0">
     <span class="hp-stat-number static-stat" id="statCount1">24/7</span>
-    <span class="hp-stat-label">РАБОТНО ВРЕМЕ</span>
+    <span class="hp-stat-label" data-i18n="stats.l1">РАБОТНО ВРЕМЕ</span>
   </div>
 
   <div class="hp-stat-card" data-delay="150">
     <span class="hp-stat-number" data-target="100" data-suffix="%" id="statCount2">0%</span>
-    <span class="hp-stat-label">ПОКРИТИЕ СОФИЯ</span>
+    <span class="hp-stat-label" data-i18n="stats.l2">ПОКРИТИЕ СОФИЯ</span>
   </div>
 
   <div class="hp-stat-card" data-delay="300">
     <span class="hp-stat-number" data-target="50000" data-suffix="€" id="statCount3">0€</span>
-    <span class="hp-stat-label">ЗАСТРАХОВКА</span>
+    <span class="hp-stat-label" data-i18n="stats.l3">ЗАСТРАХОВКА</span>
   </div>
 
 </div>
@@ -1227,9 +1230,9 @@
   <div class="container">
 
     <div class="hp-why-header">
-      <span class="section-eyebrow">ЗАЩО НАС?</span>
-      <h2 class="section-heading">Защо да изберете Арготранс за Пътна Помощ в София?</h2>
-      <p>Ние не просто превозваме автомобили – ние решаваме проблеми.</p>
+      <span class="section-eyebrow" data-i18n="why.eyebrow">ЗАЩО НАС?</span>
+      <h2 class="section-heading" data-i18n="why.h2">Защо да изберете Арготранс за Пътна Помощ в София?</h2>
+      <p data-i18n="why.p">Ние не просто превозваме автомобили – ние решаваме проблеми.</p>
     </div>
 
     <div class="hp-why-list">
@@ -1237,31 +1240,31 @@
       <div class="hp-why-card" data-delay="0">
         <div class="hp-why-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
         <div class="hp-why-text">
-          <h4>Експресна реакция</h4>
-          <p>Минимално чакане. До 30 минути в рамките на София.</p>
+          <h4 data-i18n="why.c1.h4">Експресна реакция</h4>
+          <p data-i18n="why.c1.p">Минимално чакане. До 30 минути в рамките на София.</p>
         </div>
       </div>
 
       <div class="hp-why-card" data-delay="120">
         <div class="hp-why-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
         <div class="hp-why-text">
-          <h4>Професионални шофьори</h4>
-          <p>Обучен персонал с опит в сложни ситуации.</p>
+          <h4 data-i18n="why.c2.h4">Професионални шофьори</h4>
+          <p data-i18n="why.c2.p">Обучен персонал с опит в сложни ситуации.</p>
         </div>
       </div>
 
       <div class="hp-why-card" data-delay="240">
         <div class="hp-why-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
         <div class="hp-why-text">
-          <h4>Прозрачни цени</h4>
-          <p>Без скрити такси. Знаете колко плащате предварително.</p>
+          <h4 data-i18n="why.c3.h4">Прозрачни цени</h4>
+          <p data-i18n="why.c3.p">Без скрити такси. Знаете колко плащате предварително.</p>
         </div>
       </div>
 
     </div>
 
     <div class="hp-why-cta">
-      <a href="/kontakti/" class="hp-why-cta-btn">СВЪРЖЕТЕ СЕ С НАС &rarr;</a>
+      <a href="/kontakti/" class="hp-why-cta-btn" data-i18n="why.cta">СВЪРЖЕТЕ СЕ С НАС &rarr;</a>
     </div>
 
   </div>
@@ -1276,8 +1279,8 @@
 <section class="hp-final-cta" aria-label="Обадете се сега">
   <div class="hp-final-cta-ring3" aria-hidden="true"></div>
   <div class="hp-final-cta-inner">
-    <h2 class="hp-final-cta-h2">НУЖДА ОТ ПЪТНА ПОМОЩ?</h2>
-    <p class="hp-final-cta-sub">Не губете време. Екипът на Argotrans е готов да тръгне към вас веднага.</p>
+    <h2 class="hp-final-cta-h2" data-i18n="cta.h2">НУЖДА ОТ ПЪТНА ПОМОЩ?</h2>
+    <p class="hp-final-cta-sub" data-i18n="cta.p">Не губете време. Екипът на Argotrans е готов да тръгне към вас веднага.</p>
     <a href="tel:+359988885462" class="hp-final-cta-btn" aria-label="Позвъни сега 0988 885 462">
       <i class="fa-solid fa-phone" aria-hidden="true"></i>
       ПОЗВЪНИ СЕГА — 0988 885 462
@@ -1294,8 +1297,8 @@
 <!-- SEO: За нас секция -->
 <section class="about-seo-section" style="background:#0f0f0f; padding:80px 20px;">
   <div style="max-width:860px; margin:0 auto;">
-    <span class="section-eyebrow">За нас</span>
-    <h2 class="section-heading" style="margin-bottom:24px;">Арготранс — Денонощна Пътна Помощ в София</h2>
+    <span class="section-eyebrow" data-i18n="about.eyebrow">За нас</span>
+    <h2 class="section-heading" style="margin-bottom:24px;" data-i18n="about.h2">Арготранс — Денонощна Пътна Помощ в София</h2>
     <div style="font-family:'Manrope',sans-serif; font-size:16px; line-height:1.8; color:#c9c9c9;">
       <p>Арготранс е специализирана компания за <strong>пътна помощ в София и цяла България</strong>, работеща денонощно — 24 часа в денонощието, 7 дни в седмицата, 365 дни в годината. От години помагаме на автомобилисти, попаднали в нужда — независимо дали е спукана гума, разреден акумулатор, повредена скоростна кутия или тежка катастрофа.</p>
       <p>Нашият екип реагира <strong>до 30 минути</strong> в рамките на София — от Младост до Люлин, от Надежда до Лозенец. Разполагаме с модерен репатрак и специализирана техника за <strong>репатриране на автомобили, джипове, мотори, бусове и техника до 7 тона</strong>. Всяко превозно средство е застраховано по <strong>ЧМР застраховка до 50 000 евро</strong> по време на транспорта — вашето имущество е в сигурни ръце.</p>
@@ -1309,32 +1312,32 @@
 <!-- FAQ секция -->
 <section class="faq-seo-section" style="background:#0a0a0a; padding:80px 20px;">
   <div style="max-width:860px; margin:0 auto;">
-    <span class="section-eyebrow">Чести въпроси</span>
-    <h2 class="section-heading" style="margin-bottom:40px;">Въпроси и Отговори — Пътна Помощ</h2>
+    <span class="section-eyebrow" data-i18n="faq.eyebrow">Чести въпроси</span>
+    <h2 class="section-heading" style="margin-bottom:40px;" data-i18n="faq.h2">Въпроси и Отговори — Пътна Помощ</h2>
     <div class="faq-list" style="display:flex; flex-direction:column; gap:20px;">
 
       <div class="faq-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Колко бързо пристига пътна помощ в София?</h3>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;" data-i18n="faq.q1.h3">Колко бързо пристига пътна помощ в София?</h3>
         <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Арготранс реагира до 30 минути в рамките на Sofia. Точното време зависи от трафика и локацията, но се стремим към максимална бързина при всяко повикване.</p>
       </div>
 
       <div class="faq-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Колко струва пътна помощ в София?</h3>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;" data-i18n="faq.q2.h3">Колко струва пътна помощ в София?</h3>
         <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Цените започват от 45€ за лек автомобил в рамките на София. Джип — от 55€, бус — от 70€. За извънградски транспорт — 0.90€/км. Виж пълните <a href="/putna-pomosht-ceni/" style="color:#ffc800;">цени за пътна помощ</a>.</p>
       </div>
 
       <div class="faq-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Работи ли Арготранс денонощно и в почивни дни?</h3>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;" data-i18n="faq.q3.h3">Работи ли Арготранс денонощно и в почивни дни?</h3>
         <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Да. Работим 24/7 — включително събота, неделя и официални празници. Пътната помощ не познава почивен ден.</p>
       </div>
 
       <div class="faq-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Застраховано ли е превозното ми средство по време на репатрирането?</h3>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;" data-i18n="faq.q4.h3">Застраховано ли е превозното ми средство по време на репатрирането?</h3>
         <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Да. Всяко превозно средство е покрито с ЧМР застраховка до 50 000 евро по време на транспорта. Вашият автомобил е в безопасност.</p>
       </div>
 
       <div class="faq-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Какви видове превозни средства репатрира Арготранс?</h3>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;" data-i18n="faq.q5.h3">Какви видове превозни средства репатрира Арготранс?</h3>
         <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Репатрираме леки автомобили, SUV, джипове, мотори, мотоциклети, бусове и техника до 7 тона. Разполагаме с подходяща техника за всеки тип МПС.</p>
       </div>
 
@@ -1356,7 +1359,7 @@
       <!-- Акордион 1: Квартали -->
       <div class="acc-item" style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; overflow:hidden;">
         <button class="acc-toggle" aria-expanded="false" style="width:100%; display:flex; justify-content:space-between; align-items:center; padding:22px 24px; background:#141414; border:none; cursor:pointer; text-align:left; gap:16px;">
-          <span style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; text-transform:uppercase; letter-spacing:0.5px;">Всички квартали в София, които обслужваме</span>
+          <span style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; text-transform:uppercase; letter-spacing:0.5px;">Всички квартали в София, които обслужваме data-i18n="acc.t1">Всички квартали в София, които обслужваме</span>
           <span class="acc-icon" style="color:#ffc800; font-size:20px; flex-shrink:0; transition:transform 0.3s;">&#43;</span>
         </button>
         <div class="acc-body" style="display:none; padding:24px; background:#0f0f0f; border-top:1px solid rgba(255,200,0,0.1);">
@@ -1446,14 +1449,14 @@
 
       <!-- Col 2 - Contact -->
       <div class="footer-col">
-        <h4>КОНТАКТИ</h4>
+        <h4 data-i18n="footer.h.contacts">КОНТАКТИ</h4>
         <div class="footer-contact-item">
           <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
           <a href="tel:+359988885462">0988 885 462</a>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
-          <span>София, България</span>
+          <span data-i18n="footer.location">София, България</span>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-envelope icon" aria-hidden="true"></i>
@@ -1463,19 +1466,19 @@
 
       <!-- Col 3 - Services -->
       <div class="footer-col">
-        <h4>УСЛУГИ</h4>
+        <h4 data-i18n="footer.h.services">УСЛУГИ</h4>
         <ul class="footer-services-list">
-          <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-          <li><a href="/uslugi/">Транспорт до 7 тона</a></li>
-          <li><a href="/putna-pomosht-ceni/">Пътна помощ цени</a></li>
-          <li><a href="https://argotrans10.mobile.bg/" target="_blank" rel="noopener">Продажба на автомобили</a></li>
+          <li><a href="/putna-pomosht-sofia/" data-i18n="footer.svc1">Пътна помощ София</a></li>
+          <li><a href="/uslugi/" data-i18n="footer.svc2">Транспорт до 7 тона</a></li>
+          <li><a href="/putna-pomosht-ceni/" data-i18n="footer.svc3">Пътна помощ цени</a></li>
+          <li><a href="https://argotrans10.mobile.bg/" target="_blank" rel="noopener" data-i18n="footer.svc4">Продажба на автомобили</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Argotrans. Всички права запазени.</p>
-      <p class="footer-credit">Уебсайт изработен от <a href="https://web-fabrika.com/" target="_blank" rel="noopener">WEB-FABRIKA</a></p>
+      <p class="footer-copyright" data-i18n="footer.copy">&copy; 2026 Argotrans. Всички права запазени.</p>
+      <p class="footer-credit" data-i18n="footer.credit">Уебсайт изработен от <a href="https://web-fabrika.com/" target="_blank" rel="noopener">WEB-FABRIKA</a></p>
     </div>
   </div>
 </footer>
@@ -1499,13 +1502,13 @@
   <div class="emergency-modal">
     <button class="emergency-modal-close-x" aria-label="Затвори">&times;</button>
     <span class="emergency-modal-icon" aria-hidden="true">&#128680;</span>
-    <h3 id="emergencyModalTitle">Нужна ви е пътна помощ сега?</h3>
-    <p>Екипът ни е на линия 24/7 и пристига до 30 минути в София.</p>
-    <a href="tel:+359988885462" class="emergency-modal-call">
+    <h3 id="emergencyModalTitle" data-i18n="modal.title">Нужна ви е пътна помощ сега?</h3>
+    <p data-i18n="modal.text">Екипът ни е на линия 24/7 и пристига до 30 минути в София.</p>
+    <a href="tel:+359988885462" class="emergency-modal-call" data-i18n="modal.btn">
       <i class="fa-solid fa-phone" aria-hidden="true"></i> ОБАДИ СЕ: 0988 885 462
     </a>
     <br />
-    <button class="emergency-modal-dismiss">Не, благодаря</button>
+    <button class="emergency-modal-dismiss" data-i18n="modal.dismiss">Не, благодаря</button>
   </div>
 </div>
 
@@ -1513,6 +1516,7 @@
 <!-- ================================================
      JAVASCRIPT
      ================================================ -->
+<script src="i18n.js"></script>
 <script src="interactive.js"></script>
 
 <script>

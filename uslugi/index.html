@@ -1156,7 +1156,7 @@
     }
   </style>
 </head>
-<body>
+<body data-page="uslugi">
 
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress-bar"></div>
@@ -1180,19 +1180,21 @@
     </div>
     <nav class="header-nav" aria-label="Главна навигация">
       <ul class="main-menu">
-        <li><a href="/">Пътна Помощ</a></li>
+        <li><a href="/" data-i18n="nav.home">Пытна Помощ</a></li>
         <li class="active">
-          <a href="#">Услуги</a>
+          <a href="#" data-i18n="nav.services">Услуги</a>
           <ul class="sub-menu">
-            <li><a href="/putna-pomosht-sofia/">Пътна Помощ София</a></li>
-            <li><a href="/uslugi/">Транспортни Услуги</a></li>
+            <li><a href="/putna-pomosht-sofia/" data-i18n="nav.sofia">Пытна Помощ София</a></li>
+            <li><a href="/uslugi/" data-i18n="nav.transport">Транспортни Услуги</a></li>
           </ul>
         </li>
-        <li><a href="/putna-pomosht-ceni/">Цени</a></li>
-        <li><a href="/kontakti/">Контакти</a></li>
+        <li><a href="/putna-pomosht-ceni/" data-i18n="nav.prices">Цени</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">Полезно</a></li>
+        <li><a href="/kontakti/" data-i18n="nav.contacts">Контакти</a></li>
       </ul>
     </nav>
     <div class="header-cta">
+      <button id="langSwitch" aria-label="Switch language">EN</button>
       <a href="tel:+359988885462" class="btn-cta" aria-label="Обади се на 0988 885 462">0988 885 462</a>
     </div>
     <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Отвори меню" aria-expanded="false">
@@ -1210,14 +1212,15 @@
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Затвори меню">&#10005;</button>
   </div>
   <ul class="mobile-nav-list">
-    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span>Начало</a></li>
+    <li><a href="/"><span class="mn-icon"><i class="fas fa-home"></i></span><span data-i18n="mnav.home">Начало</span></a></li>
     <li><a href="/putna-pomosht-sofia/"><span class="mn-icon"><i class="fas fa-car-crash"></i></span>Пътна Помощ София</a></li>
-    <li><a href="/uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span>Транспортни Услуги</a></li>
-    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span>Цени</a></li>
-    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span>Контакти</a></li>
+    <li><a href="/uslugi/"><span class="mn-icon"><i class="fas fa-truck"></i></span><span data-i18n="mnav.transport">Транспортни Услуги</span></a></li>
+    <li><a href="/putna-pomosht-ceni/"><span class="mn-icon"><i class="fas fa-tag"></i></span><span data-i18n="mnav.prices">Цени</span></a></li>
+    <li><a href="/blog/"><span class="mn-icon"><i class="fas fa-newspaper"></i></span><span data-i18n="mnav.blog">Полезно</span></a></li>
+    <li><a href="/kontakti/"><span class="mn-icon"><i class="fas fa-envelope"></i></span><span data-i18n="mnav.contacts">Контакти</span></a></li>
   </ul>
   <div class="mobile-cta-wrap">
-    <span class="mm-cta-label">Обадете се сега — 24/7</span>
+    <span class="mm-cta-label" data-i18n="mnav.cta">Обадете се сега — 24/7</span>
     <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;0988 885 462</a>
   </div>
 </div>
@@ -1225,7 +1228,7 @@
 
   <nav aria-label="Навигация" class="breadcrumb-bar">
     <ol class="breadcrumb">
-      <li><a href="/">Начало</a></li>
+      <li><a href="/" data-i18n="nav.home">Начало</a></li>
       <li aria-current="page">Услуги</li>
     </ol>
   </nav>
@@ -1629,14 +1632,14 @@
         <p class="footer-desc">Лицензирана пътна помощ в София и страната. Надежден партньор за вашия автомобил, бус или камион.</p>
       </div>
       <div class="footer-col">
-        <h4>КОНТАКТИ</h4>
+        <h4 data-i18n="footer.h.contacts">КОНТАКТИ</h4>
         <div class="footer-contact-item">
           <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
           <a href="tel:+359988885462">0988 885 462</a>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
-          <span>София, България</span>
+          <span data-i18n="footer.location">София, България</span>
         </div>
         <div class="footer-contact-item">
           <i class="fa-solid fa-envelope icon" aria-hidden="true"></i>
@@ -1644,18 +1647,18 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>УСЛУГИ</h4>
+        <h4 data-i18n="footer.h.services">УСЛУГИ</h4>
         <ul class="footer-services-list">
           <li><a href="/putna-pomosht-sofia/">Пътна помощ София</a></li>
-          <li><a href="/uslugi/">Транспорт до 7 тона</a></li>
+          <li><a href="/uslugi/" data-i18n="footer.svc2">Транспорт до 7 тона</a></li>
           <li><a href="/putna-pomosht-ceni/">Пътна помощ цени</a></li>
-          <li><a href="https://argotrans10.mobile.bg/" target="_blank" rel="noopener">Продажба на автомобили</a></li>
+          <li><a href="https://argotrans10.mobile.bg/" target="_blank" rel="noopener" data-i18n="footer.svc4">Продажба на автомобили</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copyright">&copy; 2026 Argotrans. Всички права запазени.</p>
-      <p class="footer-credit">Уебсайт изработен от <a href="https://web-fabrika.com/" target="_blank" rel="noopener">WEB-FABRIKA</a></p>
+      <p class="footer-credit" data-i18n="footer.credit">Уебсайт изработен от <a href="https://web-fabrika.com/" target="_blank" rel="noopener">WEB-FABRIKA</a></p>
     </div>
   </div>
 </footer>
@@ -1675,17 +1678,18 @@
   <div class="emergency-modal">
     <button class="emergency-modal-close-x" aria-label="Затвори">&times;</button>
     <span class="emergency-modal-icon" aria-hidden="true">&#128680;</span>
-    <h3 id="emergencyModalTitle">Нужна ви е пътна помощ сега?</h3>
-    <p>Екипът ни е на линия 24/7 и пристига до 30 минути в София.</p>
+    <h3 id="emergencyModalTitle" data-i18n="modal.title">Нужна ви е пътна помощ сега?</h3>
+    <p data-i18n="modal.text">Екипът ни е на линия 24/7 и пристига до 30 минути в София.</p>
     <a href="tel:+359988885462" class="emergency-modal-call">
       <i class="fa-solid fa-phone" aria-hidden="true"></i> ОБАДИ СЕ: 0988 885 462
     </a>
     <br />
-    <button class="emergency-modal-dismiss">Не, благодаря</button>
+    <button class="emergency-modal-dismiss" data-i18n="modal.dismiss">Не, благодаря</button>
   </div>
 </div>
 
 
+<script src="../i18n.js"></script>
 <script src="../interactive.js"></script>
 
 <script>
