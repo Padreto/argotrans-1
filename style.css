@@ -95,6 +95,13 @@ img { max-width: 100%; height: auto; }
 .urgency-banner a {
   color: var(--yellow);
   text-decoration: none;
+  vertical-align: baseline;
+}
+
+.urgency-banner-track span,
+.urgency-banner-track a {
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .urgency-banner-track {
