@@ -2234,3 +2234,156 @@ img { max-width: 100%; height: auto; }
   .areas-grid { grid-template-columns: 1fr; }
   .emergency-modal { padding: 30px 20px; }
 }
+
+/* ================================================
+   SECTION DIVIDERS
+   ================================================ */
+.section-divider {
+  position: relative;
+  height: 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, rgba(255,200,0,0.25) 25%, rgba(255,200,0,0.4) 50%, rgba(255,200,0,0.25) 75%, transparent);
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  background: var(--yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255,200,0,0.5);
+}
+
+/* Variant: wider glow */
+.section-divider-glow {
+  position: relative;
+  height: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255,200,0,0.12);
+  box-shadow: 0 1px 20px rgba(255,200,0,0.06);
+}
+
+/* ================================================
+   SCROLL REVEAL — Generic
+   ================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-left.reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-right.reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-scale.reveal-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.reveal-d1 { transition-delay: 80ms; }
+.reveal-d2 { transition-delay: 160ms; }
+.reveal-d3 { transition-delay: 240ms; }
+.reveal-d4 { transition-delay: 320ms; }
+
+/* ================================================
+   HOVER EFFECTS — Cards (stat, why, seo)
+   ================================================ */
+.hp-stats .stat-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hp-stats .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+  border-color: rgba(255,200,0,0.4);
+}
+
+.hp-why .why-item {
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.hp-why .why-item:hover {
+  transform: translateX(6px);
+  background: rgba(255,200,0,0.04);
+  border-color: rgba(255,200,0,0.3);
+}
+
+.hp-why .why-item:hover .why-icon {
+  transform: scale(1.1);
+  transition: transform 0.25s ease;
+}
+
+/* About/FAQ/SEO sections card hover */
+.about-seo-section,
+.faq-seo-section {
+  transition: background 0.3s ease;
+}
+
+.faq-item {
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255,200,0,0.2);
+  background: rgba(255,200,0,0.02);
+}
+
+/* ================================================
+   REDUCED MOTION — Accessibility
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .bento-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .section-divider::before {
+    box-shadow: none;
+  }
+
+  .urgency-banner-track {
+    animation: none !important;
+  }
+}

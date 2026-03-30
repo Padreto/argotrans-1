@@ -279,6 +279,23 @@
     items.forEach(function (item) { observer.observe(item); });
   }
 
+  /* ---- Scroll reveal for .reveal elements ---- */
+  function initReveal() {
+    var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (!els.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(function (el) { observer.observe(el); });
+  }
+
   /* ---- Init all ---- */
   document.addEventListener('DOMContentLoaded', function () {
     initScrollProgress();
@@ -290,6 +307,7 @@
     initServiceCardHover();
     initLightbox();
     initBentoReveal();
+    initReveal();
   });
 
 })();
