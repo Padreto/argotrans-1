@@ -1507,7 +1507,7 @@ img { max-width: 100%; height: auto; }
 .final-cta {
   position: relative;
   overflow: hidden;
-  background: var(--yellow);
+  background: linear-gradient(to bottom, rgba(255,200,0,0.92) 0%, rgba(251,191,36,0.95) 100%), url('images/putna-pomosht/putna-pomosht-sofia-05.jpg') center/cover no-repeat;
   padding: 70px 0;
   text-align: center;
 }
@@ -1570,10 +1570,36 @@ img { max-width: 100%; height: auto; }
    FOOTER
    ================================================ */
 .site-footer {
-  background: var(--dark-bg);
+  background: #0a0a0a;
   color: #fff;
   padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
 }
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255,200,0,0.03) 40px,
+    rgba(255,200,0,0.03) 80px
+  );
+  background-size: 113px 113px;
+  animation: footerStripeMove 12s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes footerStripeMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 113px 113px; }
+}
+
+.site-footer > * { position: relative; z-index: 1; }
 
 .footer-inner {
   display: grid;
@@ -2308,6 +2334,54 @@ img { max-width: 100%; height: auto; }
   margin: 0 auto;
   border-bottom: 1px solid rgba(255,200,0,0.12);
   box-shadow: 0 1px 20px rgba(255,200,0,0.06);
+}
+
+/* Parallax photo strip dividers */
+.section-divider-parallax {
+  height: 100px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-divider-parallax::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.70) 0%, rgba(10,10,10,0.50) 50%, rgba(10,10,10,0.70) 100%);
+  pointer-events: none;
+}
+
+.section-divider-parallax.strip-1 {
+  background-image: url('images/putna-pomosht/putna-pomosht-sofia-09.jpg');
+}
+
+.section-divider-parallax.strip-2 {
+  background-image: url('images/putna-pomosht/putna-pomosht-sofia-04.jpg');
+}
+
+.section-divider-parallax.strip-3 {
+  background-image: url('images/prevoz/tehnika-platforma-sofia-4.jpg');
+}
+
+.section-divider-parallax.strip-4 {
+  background-image: url('images/putna-pomosht/repatrirane-avtomobil-sofia-2.jpg');
+}
+
+@media (max-width: 768px) {
+  .section-divider-parallax {
+    height: 70px;
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-divider-parallax {
+    background-attachment: scroll;
+  }
 }
 
 /* ================================================

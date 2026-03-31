@@ -646,12 +646,38 @@
       cursor: default;
       opacity: 0;
       transform: scale(0.92) translateY(20px);
+      position: relative;
+      overflow: hidden;
       transition:
         opacity 0.55s ease,
         transform 0.55s cubic-bezier(0.22,1,0.36,1),
         border-color 0.3s ease,
         box-shadow 0.3s ease;
     }
+
+    /* Hover photo reveal on zone cards */
+    .zone-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .zone-card:hover::after { opacity: 1; }
+
+    .zone-card > * { position: relative; z-index: 1; }
+
+    .zone-card:nth-child(1)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-04.jpg'); background-size: cover; background-position: center; }
+    .zone-card:nth-child(2)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-05.jpg'); background-size: cover; background-position: center; }
+    .zone-card:nth-child(3)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-313.jpg'); background-size: cover; background-position: center; }
+    .zone-card:nth-child(4)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-06.jpg'); background-size: cover; background-position: center; }
+    .zone-card:nth-child(5)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-09.jpg'); background-size: cover; background-position: center; }
+    .zone-card:nth-child(6)::after { background-image: linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)), url('../images/putna-pomosht/putna-pomosht-sofia-02.jpg'); background-size: cover; background-position: center; }
 
     .zone-card.in-view { opacity: 1; transform: scale(1) translateY(0); }
 
@@ -767,7 +793,7 @@
        SECTION 4 — SCENARIO FLIP CARDS
        ============================================================ */
     .scenarios-section {
-      background: #0d0d0d;
+      background: linear-gradient(to bottom, rgba(13,13,13,0.88) 0%, rgba(13,13,13,0.94) 100%), url('../images/putna-pomosht/putna-pomosht-sofia-05.jpg') center/cover no-repeat;
       padding: 90px 0;
       position: relative;
       overflow: hidden;
@@ -1165,7 +1191,7 @@
        SECTION 7 — FINAL CTA
        ============================================================ */
     .final-cta-section {
-      background: #080808;
+      background: linear-gradient(to bottom, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.95) 100%), url('../images/putna-pomosht/putna-pomosht-sofia-02.jpg') center/cover no-repeat;
       padding: 110px 0;
       text-align: center;
       position: relative;
@@ -1764,7 +1790,7 @@
         <p class="feature-desc">Работим с ЧМР застраховка до 50 000€ за пълна защита на вашия автомобил по време на транспорт.</p>
       </div>
       <div class="feature-card" role="listitem">
-        <span class="feature-icon" aria-hidden="true">&#9889;</span>
+        <span class="feature-icon" aria-hidden="true"><i class="fas fa-bolt" style="color:#ffc800" aria-hidden="true"></i></span>
         <h3 class="feature-title">Бързи</h3>
         <p class="feature-desc">Достигаме до вас в рамките на 30 минути в Sofia. Денонощно, включително почивни дни и празници.</p>
       </div>
@@ -1891,7 +1917,7 @@
 
 
 <!-- FAQ секция -->
-<section class="sofia-faq-section" style="background:#0a0a0a; padding:80px 20px;">
+<section class="sofia-faq-section" style="background: linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.97) 100%), url('../images/putna-pomosht/putna-pomosht-sofia-07.jpg') center/cover no-repeat; padding:80px 20px;">
   <div style="max-width:860px; margin:0 auto;">
     <span class="section-eyebrow reveal" data-i18n="sofia.faq.eyebrow" style="display:inline-block; font-family:'Manrope',sans-serif; font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#ffc800; border:1px solid rgba(255,200,0,0.3); border-radius:50px; padding:5px 16px; margin-bottom:16px;">Чести въпроси</span>
     <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(24px,4vw,40px); color:#fff; text-transform:uppercase; margin-bottom:40px;">Въпроси за Пътна Помощ в София</h2>

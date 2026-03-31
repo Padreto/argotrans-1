@@ -1600,7 +1600,7 @@
   <div class="section-divider-glow"></div>
 
   <!-- SEO: За нас секция -->
-  <section class="about-seo-section" style="background:#0f0f0f; padding:80px 20px;">
+  <section class="about-seo-section" style="background:linear-gradient(to bottom, rgba(15,15,15,0.93) 0%, rgba(15,15,15,0.97) 100%), url('images/putna-pomosht/putna-pomosht-sofia-311.jpg') center/cover no-repeat; padding:80px 20px;">
     <div style="max-width:860px; margin:0 auto;">
       <span class="section-eyebrow reveal" data-i18n="about.eyebrow">За нас</span>
       <h2 class="section-heading reveal reveal-d1" style="margin-bottom:24px;" data-i18n="about.h2">Арготранс —
@@ -1625,109 +1625,6 @@
       </div>
     </div>
   </section>
-
-  <div class="section-divider"></div>
-
-  <!-- FAQ секция -->
-  <section class="faq-seo-section" style="background:#0a0a0a; padding:80px 20px;">
-    <div style="max-width:860px; margin:0 auto;">
-      <span class="section-eyebrow reveal" data-i18n="faq.eyebrow">Чести въпроси</span>
-      <h2 class="section-heading reveal reveal-d1" style="margin-bottom:40px;" data-i18n="faq.h2">Въпроси и Отговори —
-        Пътна Помощ</h2>
-      <div class="faq-accordion reveal reveal-d2">
-
-        <!-- FAQ 1 -->
-        <div class="faq-accordion-item">
-          <button class="faq-accordion-toggle" aria-expanded="false">
-            <span class="faq-accordion-question" data-i18n="faq.q1.h3">Колко бързо пристига пътна помощ в София?</span>
-            <span class="faq-accordion-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-accordion-body" role="region">
-            <div class="faq-accordion-answer">
-              <p>Арготранс реагира до 30 минути в рамките на Sofia. Точното време зависи от трафика и локацията, но се стремим към максимална бързина при всяко повикване.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-accordion-item">
-          <button class="faq-accordion-toggle" aria-expanded="false">
-            <span class="faq-accordion-question" data-i18n="faq.q2.h3">Колко струва пътна помощ в София?</span>
-            <span class="faq-accordion-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-accordion-body" role="region">
-            <div class="faq-accordion-answer">
-              <p>Цените започват от 45€ за лек автомобил в рамките на София. Джип — от 55€, бус — от 70€. За извънградски транспорт — 0.90€/км. Виж пълните <a href="/putna-pomosht-ceni/" style="color:#ffc800;">цени за пътна помощ</a>.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-accordion-item">
-          <button class="faq-accordion-toggle" aria-expanded="false">
-            <span class="faq-accordion-question" data-i18n="faq.q3.h3">Работи ли Арготранс денонощно и в почивни дни?</span>
-            <span class="faq-accordion-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-accordion-body" role="region">
-            <div class="faq-accordion-answer">
-              <p>Да. Работим 24/7 — включително събота, неделя и официални празници. Пътната помощ не познава почивен ден.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-accordion-item">
-          <button class="faq-accordion-toggle" aria-expanded="false">
-            <span class="faq-accordion-question" data-i18n="faq.q4.h3">Застраховано ли е превозното ми средство по време на репатрирането?</span>
-            <span class="faq-accordion-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-accordion-body" role="region">
-            <div class="faq-accordion-answer">
-              <p>Да. Всяко превозно средство е покрито с ЧМР застраховка до 50 000 евро по време на транспорта. Вашият автомобил е в безопасност.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-accordion-item">
-          <button class="faq-accordion-toggle" aria-expanded="false">
-            <span class="faq-accordion-question" data-i18n="faq.q5.h3">Какви видове превозни средства репатрира Арготранс?</span>
-            <span class="faq-accordion-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-accordion-body" role="region">
-            <div class="faq-accordion-answer">
-              <p>Репатрираме леки автомобили, SUV, джипове, мотори, мотоциклети, бусове и техника до 7 тона. Разполагаме с подходяща техника за всеки тип МПС.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <script>
-    (function () {
-      document.querySelectorAll('.faq-accordion-toggle').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var item = this.closest('.faq-accordion-item');
-          var isOpen = item.classList.contains('is-open');
-          // Close all FAQ items
-          document.querySelectorAll('.faq-accordion-item').forEach(function (el) {
-            el.classList.remove('is-open');
-            el.querySelector('.faq-accordion-toggle').setAttribute('aria-expanded', 'false');
-            el.querySelector('.faq-accordion-icon').textContent = '+';
-          });
-          // Open clicked if it was closed
-          if (!isOpen) {
-            item.classList.add('is-open');
-            this.setAttribute('aria-expanded', 'true');
-            this.querySelector('.faq-accordion-icon').textContent = '+';
-          }
-        });
-      });
-    })();
-  </script>
-
 
   <div class="section-divider-glow"></div>
 
