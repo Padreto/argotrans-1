@@ -26,6 +26,11 @@
   <meta property="og:locale" content="bg_BG" />
   <meta property="og:site_name" content="Argotrans – Пътна Помощ" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Транспортни Услуги до 7 тона | Арго Транс София" />
+  <meta name="twitter:description" content="Превоз на техника, машини и товари до 7 тона. ЧМР застраховка 50 000€. Денонощно обслужване 24/7. Арго Транс." />
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/logo/argotrans-favicon.svg" />
 
@@ -55,8 +60,102 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Услуги",
+        "name": "Транспортни Услуги",
         "item": "https://argotrans-putnapomosht.com/transportni-uslugi/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Транспортни услуги и превоз до 7 тона",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Арго Транс",
+      "telephone": "+359988885462",
+      "url": "https://argotrans-putnapomosht.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Александър Генков 10",
+        "addressLocality": "София",
+        "addressCountry": "BG"
+      }
+    },
+    "areaServed": [
+      {"@type": "City", "name": "София"},
+      {"@type": "Country", "name": "България"}
+    ],
+    "description": "Транспортни услуги и превоз на товари до 7 тона в София и цяла България. Палетни товари, строителни материали, техника, машини и превозни средства. ЧМР застраховка до 50 000€.",
+    "url": "https://argotrans-putnapomosht.com/transportni-uslugi/",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "description": "Цена по договаряне в зависимост от товара и маршрута"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Видове транспорт",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Превоз на палетни товари"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Транспорт на строителни материали"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Превоз на техника и оборудване"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Транспорт на машини до 7 тона"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Репатриране на превозни средства"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Какъв товар може да бъде транспортиран до 7 тона?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Транспортираме палетни товари, строителни материали, промишлена техника, генератори, мини багери, мотокари, контейнери и всякакви превозни средства — автомобили, бусове, мотори, ATV/UTV."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Застрахован ли е товарът по време на превоза?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Всеки товар е покрит с ЧМР застраховка до 50 000 евро по време на целия транспорт."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Работите ли в почивните дни и през нощта?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, Арготранс работи денонощно 24/7 — включително в събота, неделя и официални празници. Няма допълнителна такса за нощно или празнично обслужване."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Може ли да превозите мини багер или мотокар?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, разполагаме с бордови камион с плъзгаща платформа и лебедка, подходящ за натоварване и транспорт на строителна и земеделска техника до 7 тона."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "В какъв район работите?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Покриваме цяла София и всички магистрали в България. За извънградски транспорт предоставяме индивидуална оферта преди тръгване."
+        }
       }
     ]
   }
@@ -132,6 +231,40 @@
       padding-bottom: 0;
     }
     .tu-section-sub.in-view { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       BREADCRUMB NAV
+       ============================================================ */
+    .breadcrumb-nav {
+      background: #0d0d0d;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 12px 0;
+    }
+
+    .breadcrumb-nav .container {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: #555;
+    }
+
+    .breadcrumb-nav a {
+      color: #777;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-nav a:hover {
+      color: var(--yellow);
+    }
+
+    .breadcrumb-sep {
+      margin: 0 8px;
+      color: #333;
+    }
+
+    .breadcrumb-current {
+      color: var(--yellow);
+    }
 
     /* ============================================================
        SECTION 1 — HERO
@@ -553,6 +686,9 @@
     @media (prefers-reduced-motion: reduce) {
       .cargo-flip-inner { transition: none; }
       .cargo-flip-wrap.in-view { transition: none; }
+      .tu-faq-body,
+      .tu-faq-icon,
+      .tu-faq-answer p { transition: none; }
     }
 
     /* ============================================================
@@ -935,6 +1071,115 @@
 
 
     /* ============================================================
+       FAQ ACCORDION
+       ============================================================ */
+    .tu-faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .tu-faq-item {
+      border: 1px solid rgba(255,200,0,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .tu-faq-item:hover {
+      border-color: rgba(255,200,0,0.35);
+      box-shadow: 0 0 20px rgba(255,200,0,0.05);
+    }
+
+    .tu-faq-item.is-open {
+      border-color: rgba(255,200,0,0.4);
+      box-shadow: 0 0 30px rgba(255,200,0,0.08);
+    }
+
+    .tu-faq-toggle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 24px;
+      background: #141414;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+      transition: background 0.25s ease;
+    }
+
+    .tu-faq-toggle:hover { background: #1a1a1a; }
+
+    .tu-faq-toggle:focus-visible {
+      outline: 2px solid #ffc800;
+      outline-offset: -2px;
+      border-radius: 12px;
+    }
+
+    .tu-faq-q {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+    }
+
+    .tu-faq-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: #ffc800;
+      border: 1px solid rgba(255,200,0,0.25);
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  background 0.25s ease,
+                  border-color 0.25s ease;
+    }
+
+    .tu-faq-item.is-open .tu-faq-icon {
+      transform: rotate(45deg);
+      background: rgba(255,200,0,0.12);
+      border-color: rgba(255,200,0,0.5);
+    }
+
+    .tu-faq-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tu-faq-item.is-open .tu-faq-body {
+      grid-template-rows: 1fr;
+    }
+
+    .tu-faq-answer {
+      overflow: hidden;
+    }
+
+    .tu-faq-answer p {
+      padding: 0 24px 24px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: #9ca3af;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
+    }
+
+    .tu-faq-item.is-open .tu-faq-answer p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
        SECTION 7 — FINAL CTA WITH ROAD ANIMATION
        ============================================================ */
     .final-road-cta {
@@ -1161,6 +1406,15 @@
     <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;Обадете се</a>
   </div>
 </div>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Навигация по страници">
+  <div class="container">
+    <a href="/">Начало</a>
+    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+    <span class="breadcrumb-current">Транспортни Услуги</span>
+  </div>
+</nav>
 
 <!-- ============================================================
      SECTION 1 — HERO
@@ -1528,43 +1782,43 @@
 <!-- ============================================================
      SECTION 6 — GALLERY + CTA CARD
      ============================================================ -->
-<section class="bento-section" aria-label="Техника в действие">
+<section class="bento-section" aria-labelledby="gallery-title">
   <div class="container">
     <div class="bento-header">
-      <span class="section-label">ТЕХНИКА В ДЕЙСТВИЕ</span>
-      <h2>Нашата техника <span>в действие</span></h2>
+      <span class="section-label-tag">ТЕХНИКА В ДЕЙСТВИЕ</span>
+      <h2 class="tu-section-title" id="gallery-title">Нашата техника <span>в действие</span></h2>
     </div>
     <div class="bento-grid">
       <div class="bento-item featured" data-lb="../images/prevoz/prevoz-tovari-1.jpg">
-        <img src="../images/prevoz/prevoz-tovari-1.jpg" alt="Превоз на товари с платформа – Арготранс" loading="lazy" width="800" height="600" />
+        <img src="../images/prevoz/prevoz-tovari-1.jpg" alt="Превоз на палетни товари с бордова платформа – Арготранс София" loading="lazy" width="800" height="600" />
         <div class="bento-caption"><span class="caption-tag">Транспорт</span><p>Превоз на тежки товари</p></div>
       </div>
       <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-2.jpg">
-        <img src="../images/prevoz/prevoz-tovari-2.jpg" alt="Транспорт на техника" loading="lazy" width="400" height="300" />
+        <img src="../images/prevoz/prevoz-tovari-2.jpg" alt="Транспорт на промишлена техника с платформа до 7 тона" loading="lazy" width="400" height="300" />
         <div class="bento-caption"><span class="caption-tag">Техника</span><p>Специализиран превоз</p></div>
       </div>
       <div class="bento-item" data-lb="../images/prevoz/tehnika-platforma-sofia-4.jpg">
-        <img src="../images/prevoz/tehnika-platforma-sofia-4.jpg" alt="Платформа за техника София" loading="lazy" width="400" height="300" />
+        <img src="../images/prevoz/tehnika-platforma-sofia-4.jpg" alt="Плъзгаща платформа за товари до 7 тона – Арготранс София" loading="lazy" width="400" height="300" />
         <div class="bento-caption"><span class="caption-tag">Платформа</span><p>До 7 тона товароносимост</p></div>
       </div>
       <div class="bento-item wide" data-lb="../images/prevoz/prevoz-tovari-3.jpg">
-        <img src="../images/prevoz/prevoz-tovari-3.jpg" alt="Превоз на машини" loading="lazy" width="800" height="300" />
+        <img src="../images/prevoz/prevoz-tovari-3.jpg" alt="Безопасен превоз на строителни машини с лебедка и укрепване" loading="lazy" width="800" height="300" />
         <div class="bento-caption"><span class="caption-tag">Машини</span><p>Безопасен транспорт на машини</p></div>
       </div>
       <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-4.jpg">
-        <img src="../images/prevoz/prevoz-tovari-4.jpg" alt="Превоз на товари" loading="lazy" width="400" height="300" />
+        <img src="../images/prevoz/prevoz-tovari-4.jpg" alt="Професионален превоз на строителни материали в София" loading="lazy" width="400" height="300" />
         <div class="bento-caption"><span class="caption-tag">Товари</span><p>Професионален превоз</p></div>
       </div>
       <div class="bento-item" data-lb="../images/prevoz/prevoz-tovari-5.jpg">
-        <img src="../images/prevoz/prevoz-tovari-5.jpg" alt="Транспорт на товари" loading="lazy" width="400" height="300" />
+        <img src="../images/prevoz/prevoz-tovari-5.jpg" alt="Денонощен транспорт на товари 24/7 – Арготранс" loading="lazy" width="400" height="300" />
         <div class="bento-caption"><span class="caption-tag">24/7</span><p>Денонощно обслужване</p></div>
       </div>
       <div class="bento-item wide" data-lb="../images/prevoz/prevoz-tovari-6.jpg">
-        <img src="../images/prevoz/prevoz-tovari-6.jpg" alt="Арготранс транспортни услуги" loading="lazy" width="800" height="300" />
+        <img src="../images/prevoz/prevoz-tovari-6.jpg" alt="Арготранс – надежден партньор за транспортни услуги в България" loading="lazy" width="800" height="300" />
         <div class="bento-caption"><span class="caption-tag">Арготранс</span><p>Надежден партньор</p></div>
       </div>
       <div class="bento-item" data-lb="../images/prevoz/putna-pomosht-sofia-314.jpg">
-        <img src="../images/prevoz/putna-pomosht-sofia-314.jpg" alt="Пътна помощ София" loading="lazy" width="400" height="300" />
+        <img src="../images/prevoz/putna-pomosht-sofia-314.jpg" alt="Репатриране на автомобил с платформа в София – Арготранс" loading="lazy" width="400" height="300" />
         <div class="bento-caption"><span class="caption-tag">Репатрак</span><p>Бързо репатриране</p></div>
       </div>
     </div>
@@ -1601,15 +1855,116 @@
 
 
 
-<!-- SEO: Връзка между транспортни услуги и пътна помощ -->
-<section style="background:#0f0f0f; padding:80px 20px;">
+<!-- ============================================================
+     FAQ ACCORDION SECTION
+     ============================================================ -->
+<section class="tu-faq-section" aria-labelledby="tu-faq-title" style="background:#0a0a0a; padding:80px 20px;">
   <div style="max-width:860px; margin:0 auto;">
-    <span style="display:inline-block; font-family:'Manrope',sans-serif; font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#ffc800; border:1px solid rgba(255,200,0,0.3); border-radius:50px; padding:5px 16px; margin-bottom:16px;">Пътна помощ и транспорт</span>
-    <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(24px,4vw,40px); color:#fff; text-transform:uppercase; margin-bottom:24px;">Транспортни Услуги и Пътна Помощ в София</h2>
-    <div style="font-family:'Manrope',sans-serif; font-size:16px; line-height:1.8; color:#c9c9c9;">
+    <span class="section-label-tag">ЧЕСТИ ВЪПРОСИ</span>
+    <h2 class="tu-section-title" id="tu-faq-title" style="margin-bottom:40px;">Въпроси за <span>транспортните услуги</span></h2>
+
+    <div class="tu-faq-accordion">
+
+      <div class="tu-faq-item">
+        <button class="tu-faq-toggle" aria-expanded="false">
+          <span class="tu-faq-q">Какъв товар може да бъде транспортиран до 7 тона?</span>
+          <span class="tu-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="tu-faq-body" role="region">
+          <div class="tu-faq-answer">
+            <p>Транспортираме палетни товари, строителни материали, промишлена техника, генератори, мини багери, мотокари, контейнери и всякакви превозни средства — автомобили, бусове, мотори, ATV/UTV.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tu-faq-item">
+        <button class="tu-faq-toggle" aria-expanded="false">
+          <span class="tu-faq-q">Застрахован ли е товарът по време на превоза?</span>
+          <span class="tu-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="tu-faq-body" role="region">
+          <div class="tu-faq-answer">
+            <p>Да. Всеки товар е покрит с <strong style="color:var(--yellow);">ЧМР застраховка до 50 000 евро</strong> по време на целия транспорт. Вашият товар е напълно защитен.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tu-faq-item">
+        <button class="tu-faq-toggle" aria-expanded="false">
+          <span class="tu-faq-q">Работите ли в почивните дни и през нощта?</span>
+          <span class="tu-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="tu-faq-body" role="region">
+          <div class="tu-faq-answer">
+            <p>Да, Арготранс работи денонощно 24/7 — включително в събота, неделя и официални празници. Няма допълнителна такса за нощно или празнично обслужване.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tu-faq-item">
+        <button class="tu-faq-toggle" aria-expanded="false">
+          <span class="tu-faq-q">Може ли да превозите мини багер или мотокар?</span>
+          <span class="tu-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="tu-faq-body" role="region">
+          <div class="tu-faq-answer">
+            <p>Да, разполагаме с бордови камион с плъзгаща платформа и лебедка, подходящ за натоварване и транспорт на строителна и земеделска техника до 7 тона.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tu-faq-item">
+        <button class="tu-faq-toggle" aria-expanded="false">
+          <span class="tu-faq-q">В какъв район работите?</span>
+          <span class="tu-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="tu-faq-body" role="region">
+          <div class="tu-faq-answer">
+            <p>Покриваме <a href="/putna-pomosht-sofia/" style="color:#ffc800;">цяла София</a> и всички магистрали в България. За извънградски транспорт предоставяме индивидуална оферта преди тръгване.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  document.querySelectorAll('.tu-faq-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = this.closest('.tu-faq-item');
+      var isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.tu-faq-item').forEach(function (el) {
+        el.classList.remove('is-open');
+        el.querySelector('.tu-faq-toggle').setAttribute('aria-expanded', 'false');
+        el.querySelector('.tu-faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
+
+<div class="section-divider-glow"></div>
+
+<!-- ============================================================
+     SEO TEXT SECTION
+     ============================================================ -->
+<section class="seo-text-section" aria-labelledby="seo-text-title" style="background:#0f0f0f; padding:80px 20px;">
+  <div style="max-width:860px; margin:0 auto;">
+    <span class="section-label-tag">Транспорт и логистика</span>
+    <h2 class="tu-section-title" id="seo-text-title" style="margin-bottom:24px;">Транспортни Услуги и <span>Пътна Помощ</span> в София</h2>
+    <div class="seo-text-body" style="font-family:'Manrope',sans-serif; font-size:16px; line-height:1.8; color:#c9c9c9;">
       <p>Арготранс съчетава <strong>транспортни услуги</strong> и <strong>пътна помощ</strong> в едно — денонощно, в София и цяла България. Нашите услуги са насочени към автомобилисти, попаднали в нужда, но и към фирми с нужда от превоз на техника, машини и специализирани товари.</p>
-      <p>Когато колата ви аварира и трябва да бъде откарана до сервиз, ние се появяваме в рамките на <strong>30 минути</strong> и я транспортираме безопасно. Когато имате нужда от превоз на <strong>строителна техника, мотокари, контейнери или тежки агрегати</strong> — разполагаме с платформа до 7 тона.</p>
-      <p>Вижте <a href="/putna-pomosht-sofia/" style="color:#ffc800; text-decoration:none;">пълните ни услуги за пътна помощ в София</a> или проверете <a href="/putna-pomosht-ceni/" style="color:#ffc800; text-decoration:none;">актуалните цени</a>. За запитване или спешна помощ: <strong><a href="tel:+359988885462" style="color:#ffc800; text-decoration:none;">0988 885 462</a></strong>.</p>
+      <p>Разполагаме с <strong>бордови камион с плъзгаща платформа и лебедка</strong>, подходящ за палетни товари, строителни материали (тухли, цимент, арматура), промишлена техника (генератори, компресори), складови контейнери, мини багери, мотокари и тракторна техника. Максималната товароносимост е <strong>7 тона</strong>.</p>
+      <p>Когато колата ви аварира и трябва да бъде откарана до сервиз, ние се появяваме в рамките на <strong>30 минути в София</strong> и я транспортираме безопасно. Всяко превозно средство е покрито с <strong>ЧМР застраховка до 50 000 евро</strong> по време на целия транспорт — без изключения.</p>
+      <p>Покриваме всички квартали на София — Младост, Люлин, Надежда, Лозенец, Бояна, Студентски град — както и национални маршрути по магистралите Тракия, Хемус, Струма и Марица. За извънградски транспорт предоставяме <a href="/putna-pomosht-ceni/" style="color:#ffc800; text-decoration:none;">индивидуална оферта</a> преди тръгване.</p>
+      <p>За разлика от повечето услуги, при нас <strong>няма скрити такси, нощни надбавки или допълнителни плащания</strong> за уикенди и празници. Цената, която ви съобщаваме по телефона, е крайната цена.</p>
+      <p>Вижте <a href="/putna-pomosht-sofia/" style="color:#ffc800; text-decoration:none;">пълните ни услуги за пътна помощ в София</a>, разгледайте <a href="/putna-pomosht-ceni/" style="color:#ffc800; text-decoration:none;">актуалните цени</a> или прочетете <a href="/blog/" style="color:#ffc800; text-decoration:none;">полезни съвети в блога</a>. За запитване или спешна помощ: <strong><a href="tel:+359988885462" style="color:#ffc800; text-decoration:none;">0988 885 462</a></strong>.</p>
     </div>
   </div>
 </section>
@@ -1810,6 +2165,13 @@
     observe('.pillar-card', function (el) {
       el.classList.add('in-view');
     }, { threshold: 0.15 });
+
+    /* -------------------------------------------------------
+       SECTION 6 — GALLERY HEADER (fade-in)
+       ------------------------------------------------------- */
+    observe('#gallery-title', function (el) {
+      el.classList.add('in-view');
+    }, { threshold: 0.3 });
 
     /* -------------------------------------------------------
        SECTION 7 — FINAL CTA (staggered reveal)

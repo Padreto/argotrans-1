@@ -26,6 +26,11 @@
   <meta property="og:locale" content="bg_BG" />
   <meta property="og:site_name" content="Argotrans – Пътна Помощ" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Пътна Помощ София 24/7 | Репатрак от 45€ | Арготранс" />
+  <meta name="twitter:description" content="Денонощна пътна помощ в София. Репатрак до 30 мин. ЧМР застраховка 50 000€. Автомобил от 45€. Арготранс." />
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/logo/argotrans-favicon.svg" />
 
@@ -93,6 +98,37 @@
         "acceptedAnswer": {"@type": "Answer", "text": "Освен репатриране, предлагаме и помощ при ПТП, транспорт до сервиз или избрана от вас дестинация, превоз на техника до 7 тона и транспортни услуги."}
       }
     ]
+  }
+  </script>
+
+  <!-- JSON-LD: Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Пътна помощ и репатриране в София",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Арго Транс",
+      "telephone": "+359988885462",
+      "url": "https://argotrans-putnapomosht.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Александър Генков 10",
+        "addressLocality": "София",
+        "addressCountry": "BG"
+      }
+    },
+    "areaServed": {"@type": "City", "name": "София"},
+    "description": "Денонощна пътна помощ в София — репатриране, подаване на ток, смяна на гума, транспорт до сервиз. Пристигаме до 30 мин. ЧМР застраховка до 50 000€.",
+    "url": "https://argotrans-putnapomosht.com/putna-pomosht-sofia/",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "45",
+      "availability": "https://schema.org/InStock",
+      "description": "Пътна помощ за лек автомобил в София от 45€"
+    }
   }
   </script>
 
@@ -1372,6 +1408,15 @@
     <a href="tel:+359988885462" class="mm-cta-btn"><i class="fas fa-phone-alt"></i>&nbsp;Обадете се</a>
   </div>
 </div>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Навигация по страници" style="background:#0d0d0d; border-bottom:1px solid #1a1a1a; padding:12px 0;">
+  <div class="container" style="font-family:'Manrope',sans-serif; font-size:13px; color:#555;">
+    <a href="/" style="color:#777; text-decoration:none;">Начало</a>
+    <span style="margin:0 8px; color:#333;">/</span>
+    <span style="color:#ffc800;">Пътна Помощ София</span>
+  </div>
+</nav>
 
 <!-- ================================================
      SECTION 1 — ANIMATED HERO
