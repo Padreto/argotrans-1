@@ -633,16 +633,39 @@
     }
 
     .zone-compass {
-      font-size: 28px;
-      line-height: 1;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,200,0,0.08);
+      border: 1px solid rgba(255,200,0,0.2);
+      color: var(--yellow);
+      font-size: 16px;
+      flex-shrink: 0;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .zone-card:hover .zone-compass {
+      background: rgba(255,200,0,0.15);
+      border-color: rgba(255,200,0,0.5);
     }
 
     .zone-name {
       font-family: var(--font-heading);
-      font-size: 20px;
+      font-size: 22px;
       color: var(--yellow);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      padding-bottom: 0;
+    }
+
+    .zone-subtitle {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 14px;
       padding-bottom: 0;
     }
 
@@ -651,22 +674,45 @@
       font-size: 13px;
       color: #6b7280;
       line-height: 1.8;
+      margin-bottom: 14px;
     }
 
     .zone-neighborhoods span {
       display: inline-block;
-      padding: 2px 8px;
+      padding: 4px 10px;
       background: rgba(255,200,0,0.06);
-      border-radius: 4px;
-      margin: 2px 3px 2px 0;
+      border: 1px solid rgba(255,200,0,0.08);
+      border-radius: 6px;
+      margin: 3px 4px 3px 0;
       color: #9ca3af;
       font-size: 12px;
-      transition: background 0.25s, color 0.25s;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
     }
 
     .zone-card:hover .zone-neighborhoods span {
       background: rgba(255,200,0,0.1);
+      border-color: rgba(255,200,0,0.2);
       color: #d1d5db;
+    }
+
+    .zone-time {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: #555;
+      letter-spacing: 0.5px;
+      padding-top: 10px;
+      border-top: 1px solid #1e1e1e;
+      transition: color 0.25s;
+    }
+
+    .zone-time i {
+      color: var(--yellow);
+      margin-right: 4px;
+      font-size: 11px;
+    }
+
+    .zone-card:hover .zone-time {
+      color: #9ca3af;
     }
 
     .coverage-footnote {
@@ -968,6 +1014,118 @@
     .photo-caption { z-index: 2; }
 
     /* ============================================================
+       SOFIA FAQ ACCORDION
+       ============================================================ */
+    .sofia-faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sofia-faq-item {
+      border: 1px solid rgba(255,200,0,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sofia-faq-item:hover {
+      border-color: rgba(255,200,0,0.35);
+      box-shadow: 0 0 20px rgba(255,200,0,0.05);
+    }
+
+    .sofia-faq-item.is-open {
+      border-color: rgba(255,200,0,0.4);
+      box-shadow: 0 0 30px rgba(255,200,0,0.08);
+    }
+
+    .sofia-faq-toggle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 24px;
+      background: #141414;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+      transition: background 0.25s ease;
+    }
+
+    .sofia-faq-toggle:hover {
+      background: #1a1a1a;
+    }
+
+    .sofia-faq-toggle:focus-visible {
+      outline: 2px solid #ffc800;
+      outline-offset: -2px;
+      border-radius: 12px;
+    }
+
+    .sofia-faq-question {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+    }
+
+    .sofia-faq-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 400;
+      color: #ffc800;
+      border: 1px solid rgba(255,200,0,0.25);
+      border-radius: 50%;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  background 0.25s ease,
+                  border-color 0.25s ease;
+    }
+
+    .sofia-faq-item.is-open .sofia-faq-icon {
+      transform: rotate(45deg);
+      background: rgba(255,200,0,0.12);
+      border-color: rgba(255,200,0,0.5);
+    }
+
+    .sofia-faq-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sofia-faq-item.is-open .sofia-faq-body {
+      grid-template-rows: 1fr;
+    }
+
+    .sofia-faq-answer {
+      overflow: hidden;
+    }
+
+    .sofia-faq-answer p {
+      padding: 0 24px 24px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      color: #9ca3af;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
+    }
+
+    .sofia-faq-item.is-open .sofia-faq-answer p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
        SECTION 7 — FINAL CTA
        ============================================================ */
     .final-cta-section {
@@ -1237,7 +1395,7 @@
         <span>&#9201;</span> до 30 мин пристигане
       </div>
       <div class="hero-stat-badge" id="heroBadge2">
-        <span><i class="fas fa-coins" style="color:#ffc800" aria-hidden="true"></i></span> от 45€
+        от 45€
       </div>
     </div>
 
@@ -1315,56 +1473,74 @@
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
-          <h3 class="zone-name">Пътна помощ — Изток (Младост, Дружба)</h3>
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-location-arrow" style="transform:rotate(45deg)"></i></span>
+          <h3 class="zone-name">Изток</h3>
         </div>
+        <p class="zone-subtitle">Младост, Дружба и околни</p>
         <div class="zone-neighborhoods" aria-label="Квартали: Младост, Дружба, Горубляне, Панчарево">
-          <span>Младост</span><span>Дружба</span><span>Горубляне</span><span>Панчарево</span>
+          <span>Младост 1–4</span><span>Дружба 1–2</span><span>Горубляне</span><span>Панчарево</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 25 мин</div>
       </div>
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
-          <h3 class="zone-name">Пътна помощ — Юг (Лозенец, Бояна, Витоша)</h3>
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-location-arrow" style="transform:rotate(135deg)"></i></span>
+          <h3 class="zone-name">Юг</h3>
         </div>
-        <div class="zone-neighborhoods" aria-label="Квартали: Бояна, Драгалевци, Симеоново, Витоша">
-          <span>Бояна</span><span>Драгалевци</span><span>Симеоново</span><span>Витоша</span>
+        <p class="zone-subtitle">Лозенец, Бояна, Витоша</p>
+        <div class="zone-neighborhoods" aria-label="Квартали: Лозенец, Бояна, Драгалевци, Симеоново, Витоша">
+          <span>Лозенец</span><span>Бояна</span><span>Драгалевци</span><span>Симеоново</span><span>Витоша</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 30 мин</div>
       </div>
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
-          <h3 class="zone-name">Пътна помощ — Център (Сердика, Банишора)</h3>
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-crosshairs"></i></span>
+          <h3 class="zone-name">Център</h3>
         </div>
-        <div class="zone-neighborhoods" aria-label="Квартали: Лозенец, Оборище, Средец">
-          <span>Лозенец</span><span>Оборище</span><span>Средец</span>
+        <p class="zone-subtitle">Сердика, Оборище, Средец</p>
+        <div class="zone-neighborhoods" aria-label="Квартали: Лозенец, Оборище, Средец, Банишора">
+          <span>Оборище</span><span>Средец</span><span>Банишора</span><span>Сердика</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 20 мин</div>
       </div>
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
-          <h3 class="zone-name">Пътна помощ — Запад (Люлин, Надежда)</h3>
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-location-arrow" style="transform:rotate(-135deg)"></i></span>
+          <h3 class="zone-name">Запад</h3>
         </div>
+        <p class="zone-subtitle">Люлин, Овча купел</p>
         <div class="zone-neighborhoods" aria-label="Квартали: Люлин, Овча купел, Красна поляна">
-          <span>Люлин</span><span>Овча купел</span><span>Красна поляна</span>
+          <span>Люлин 1–10</span><span>Овча купел</span><span>Красна поляна</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 30 мин</div>
       </div>
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
-          <h3 class="zone-name">Пътна помощ — Север (Надежда, Обеля)</h3>
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-location-arrow" style="transform:rotate(-45deg)"></i></span>
+          <h3 class="zone-name">Север</h3>
         </div>
-        <div class="zone-neighborhoods" aria-label="Квартали: Надежда, Илиянци, Враждебна">
-          <span>Надежда</span><span>Илиянци</span><span>Враждебна</span>
+        <p class="zone-subtitle">Надежда, Обеля, Илиянци</p>
+        <div class="zone-neighborhoods" aria-label="Квартали: Надежда, Илиянци, Враждебна, Обеля">
+          <span>Надежда 1–4</span><span>Илиянци</span><span>Враждебна</span><span>Обеля</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 25 мин</div>
       </div>
 
       <div class="zone-card" role="listitem">
         <div class="zone-direction">
+          <span class="zone-compass" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
           <h3 class="zone-name">Студентски</h3>
         </div>
-        <div class="zone-neighborhoods" aria-label="Квартали: Студентски град, Дървеница">
-          <span>Студентски град</span><span>Дървеница</span>
+        <p class="zone-subtitle">Студентски град, Дървеница</p>
+        <div class="zone-neighborhoods" aria-label="Квартали: Студентски град, Дървеница, Мусагеница">
+          <span>Студентски град</span><span>Дървеница</span><span>Мусагеница</span>
         </div>
+        <div class="zone-time"><i class="fas fa-clock" aria-hidden="true"></i> до 20 мин</div>
       </div>
 
     </div>
@@ -1418,7 +1594,7 @@
       <div class="flip-card-wrap" role="listitem" tabindex="0" aria-label="Спукана гума — натиснете за детайли">
         <div class="flip-card">
           <div class="flip-front">
-            <span class="flip-emoji" aria-hidden="true"><i class="fas fa-fire-extinguisher" style="color:#ffc800" aria-hidden="true"></i></span>
+            <span class="flip-emoji" aria-hidden="true"><i class="fas fa-circle-dot" style="color:#ffc800" aria-hidden="true"></i></span>
             <p class="flip-problem">Спукана гума</p>
             <span class="flip-hint">натисни</span>
           </div>
@@ -1432,7 +1608,7 @@
       <div class="flip-card-wrap" role="listitem" tabindex="0" aria-label="Свършило гориво — натиснете за детайли">
         <div class="flip-card">
           <div class="flip-front">
-            <span class="flip-emoji" aria-hidden="true">&#9981;</span>
+            <span class="flip-emoji" aria-hidden="true"><i class="fas fa-gas-pump" style="color:#ffc800" aria-hidden="true"></i></span>
             <p class="flip-problem">Свършило гориво</p>
             <span class="flip-hint">натисни</span>
           </div>
@@ -1670,34 +1846,97 @@
 
 
 <!-- FAQ секция -->
-<section style="background:#0a0a0a; padding:80px 20px;">
+<section class="sofia-faq-section" style="background:#0a0a0a; padding:80px 20px;">
   <div style="max-width:860px; margin:0 auto;">
-    <span style="display:inline-block; font-family:'Manrope',sans-serif; font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#ffc800; border:1px solid rgba(255,200,0,0.3); border-radius:50px; padding:5px 16px; margin-bottom:16px;" data-i18n="sofia.faq.eyebrow">Чести въпроси</span>
+    <span class="section-eyebrow reveal" data-i18n="sofia.faq.eyebrow" style="display:inline-block; font-family:'Manrope',sans-serif; font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#ffc800; border:1px solid rgba(255,200,0,0.3); border-radius:50px; padding:5px 16px; margin-bottom:16px;">Чести въпроси</span>
     <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(24px,4vw,40px); color:#fff; text-transform:uppercase; margin-bottom:40px;">Въпроси за Пътна Помощ в София</h2>
-    <div style="display:flex; flex-direction:column; gap:16px;">
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Колко бързо пристига пътна помощ в София?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Арготранс реагира до 30 минути в рамките на София. Покриваме всички квартали — Младост, Люлин, Надежда, Лозенец, Бояна, Студентски град и всички останали.</p>
+
+    <div class="sofia-faq-accordion">
+
+      <div class="sofia-faq-item">
+        <button class="sofia-faq-toggle" aria-expanded="false">
+          <span class="sofia-faq-question">Колко бързо пристига пътна помощ в София?</span>
+          <span class="sofia-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="sofia-faq-body" role="region">
+          <div class="sofia-faq-answer">
+            <p>Арготранс реагира до 30 минути в рамките на София. Покриваме всички квартали — Младост, Люлин, Надежда, Лозенец, Бояна, Студентски град и всички останали.</p>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Работи ли Арготранс в неделя и официални празници?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Да, работим денонощно — 24/7, включително събота, неделя и всички официални празници. Пътната помощ не познава почивен ден.</p>
+
+      <div class="sofia-faq-item">
+        <button class="sofia-faq-toggle" aria-expanded="false">
+          <span class="sofia-faq-question">Работи ли Арготранс в неделя и официални празници?</span>
+          <span class="sofia-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="sofia-faq-body" role="region">
+          <div class="sofia-faq-answer">
+            <p>Да, работим денонощно — 24/7, включително събота, неделя и всички официални празници. Пътната помощ не познава почивен ден.</p>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Покрива ли Арготранс квартал Младост?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Да, покриваме Младост 1, 2, 3 и 4. Средното ни време за пристигане в Младост е до 20-25 минути.</p>
+
+      <div class="sofia-faq-item">
+        <button class="sofia-faq-toggle" aria-expanded="false">
+          <span class="sofia-faq-question">Покрива ли Арготранс квартал Младост?</span>
+          <span class="sofia-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="sofia-faq-body" role="region">
+          <div class="sofia-faq-answer">
+            <p>Да, покриваме Младост 1, 2, 3 и 4. Средното ни време за пристигане в Младост е до 20–25 минути.</p>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Застрахован ли е автомобилът по време на репатрирането?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Да. Всяко превозно средство е застраховано с ЧМР застраховка до 50 000 евро за времето на транспорта.</p>
+
+      <div class="sofia-faq-item">
+        <button class="sofia-faq-toggle" aria-expanded="false">
+          <span class="sofia-faq-question">Застрахован ли е автомобилът по време на репатрирането?</span>
+          <span class="sofia-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="sofia-faq-body" role="region">
+          <div class="sofia-faq-answer">
+            <p>Да. Всяко превозно средство е застраховано с ЧМР застраховка до <strong style="color:var(--yellow);">50 000 евро</strong> за времето на транспорта.</p>
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Какво включва услугата — само репатриране ли е?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Освен репатриране, предлагаме и помощ при ПТП, транспорт до сервиз или избрана от вас дестинация, превоз на техника до 7 тона и транспортни услуги.</p>
+
+      <div class="sofia-faq-item">
+        <button class="sofia-faq-toggle" aria-expanded="false">
+          <span class="sofia-faq-question">Какво включва услугата — само репатриране ли е?</span>
+          <span class="sofia-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="sofia-faq-body" role="region">
+          <div class="sofia-faq-answer">
+            <p>Освен репатриране, предлагаме и помощ при ПТП, транспорт до сервиз или избрана от вас дестинация, превоз на техника до 7 тона и <a href="/transportni-uslugi/" style="color:#ffc800;">транспортни услуги</a>.</p>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  document.querySelectorAll('.sofia-faq-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = this.closest('.sofia-faq-item');
+      var isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.sofia-faq-item').forEach(function (el) {
+        el.classList.remove('is-open');
+        el.querySelector('.sofia-faq-toggle').setAttribute('aria-expanded', 'false');
+        el.querySelector('.sofia-faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        this.setAttribute('aria-expanded', 'true');
+        this.querySelector('.sofia-faq-icon').textContent = '+';
+      }
+    });
+  });
+})();
+</script>
 
 <div class="section-divider"></div>
 
