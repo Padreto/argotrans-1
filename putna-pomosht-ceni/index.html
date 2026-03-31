@@ -809,10 +809,11 @@
     }
 
     .svc-card .svc-emoji {
-      font-size: 34px;
+      font-size: 30px;
       display: block;
       margin-bottom: 12px;
       line-height: 1;
+      color: var(--yellow);
     }
 
     .svc-card .svc-name {
@@ -1223,15 +1224,15 @@
 
     <div class="ceni-hero-pills" role="list">
       <div class="hero-pill" role="listitem" data-pill-delay="1.2">
-        <span class="pill-icon" aria-hidden="true">🚗</span>
+        <span class="pill-icon" aria-hidden="true"><i class="fas fa-car"></i></span>
         <span>Автомобил от 45€</span>
       </div>
       <div class="hero-pill" role="listitem" data-pill-delay="1.38">
-        <span class="pill-icon" aria-hidden="true">🚙</span>
+        <span class="pill-icon" aria-hidden="true"><i class="fas fa-car-rear"></i></span>
         <span>Джип от 55€</span>
       </div>
       <div class="hero-pill" role="listitem" data-pill-delay="1.56">
-        <span class="pill-icon" aria-hidden="true">🚐</span>
+        <span class="pill-icon" aria-hidden="true"><i class="fas fa-bus"></i></span>
         <span>Бус от 70€</span>
       </div>
     </div>
@@ -1263,15 +1264,15 @@
       <div class="calc-step-label">Стъпка 1 — Вид на превозното средство</div>
       <div class="calc-toggle-row" role="group" aria-label="Избери вид превозно средство">
         <button class="calc-btn active" data-vehicle="car" aria-pressed="true">
-          <span class="cb-icon" aria-hidden="true">🚗</span>
+          <span class="cb-icon" aria-hidden="true"><i class="fas fa-car"></i></span>
           <span>Автомобил / Мотор</span>
         </button>
         <button class="calc-btn" data-vehicle="suv" aria-pressed="false">
-          <span class="cb-icon" aria-hidden="true">🚙</span>
+          <span class="cb-icon" aria-hidden="true"><i class="fas fa-car-rear"></i></span>
           <span>Джип / Ван</span>
         </button>
         <button class="calc-btn" data-vehicle="bus" aria-pressed="false">
-          <span class="cb-icon" aria-hidden="true">🚐</span>
+          <span class="cb-icon" aria-hidden="true"><i class="fas fa-bus"></i></span>
           <span>Бус</span>
         </button>
       </div>
@@ -1282,11 +1283,11 @@
       <div class="calc-step-label">Стъпка 2 — Местоположение</div>
       <div class="calc-toggle-row" role="group" aria-label="Избери местоположение">
         <button class="calc-btn active" data-location="city" aria-pressed="true">
-          <span class="cb-icon" aria-hidden="true">🏙️</span>
+          <span class="cb-icon" aria-hidden="true"><i class="fas fa-city"></i></span>
           <span>В рамките на София</span>
         </button>
         <button class="calc-btn" data-location="rural" aria-pressed="false">
-          <span class="cb-icon" aria-hidden="true">🛣️</span>
+          <span class="cb-icon" aria-hidden="true"><i class="fas fa-road"></i></span>
           <span>Извънградско</span>
         </button>
       </div>
@@ -1518,39 +1519,39 @@
 
     <div class="services-icon-grid" role="list">
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">⚡</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-bolt"></i></span>
         <div class="svc-name">Подаване на ток</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">🔧</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-wrench"></i></span>
         <div class="svc-name">Смяна на гума</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">⛽</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-gas-pump"></i></span>
         <div class="svc-name">Доставка на гориво</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">🚜</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-truck-pickup"></i></span>
         <div class="svc-name">Изваждане от канавка</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">📦</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-boxes-stacked"></i></span>
         <div class="svc-name">Превоз на товари до 7т</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">🏎️</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-car-side"></i></span>
         <div class="svc-name">Превоз на спортни коли</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">🔗</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-screwdriver-wrench"></i></span>
         <div class="svc-name">Насочване към сервиз</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">🚛</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-truck"></i></span>
         <div class="svc-name">Превоз на машини</div>
       </div>
       <div class="svc-card" role="listitem">
-        <span class="svc-emoji" aria-hidden="true">📞</span>
+        <span class="svc-emoji" aria-hidden="true"><i class="fas fa-phone"></i></span>
         <div class="svc-name">По договаряне</div>
       </div>
     </div>
@@ -1636,13 +1637,33 @@
         </div>
       </div>
 
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px; margin-bottom:16px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Каква е нощната тарифа за пътна помощ?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">Арготранс работи на едни и същи цени денем и нощем — без нощна надбавка. Цената за автомобил е от 45€ независимо от часа.</p>
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-a5">
+          <span class="fq-text">Каква е нощната тарифа за пътна помощ?</span>
+          <span class="fq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer" id="faq-a5" role="region">
+          <div class="faq-answer-inner">
+            Арготранс работи на едни и същи цени денем и нощем — без нощна надбавка.
+            Цената за автомобил е от <strong style="color:var(--yellow);">45€</strong> независимо от часа.
+            Няма допълнително оскъпяване за нощно обслужване, уикенди или празници.
+          </div>
+        </div>
       </div>
-      <div style="border:1px solid rgba(255,200,0,0.15); border-radius:12px; padding:24px; margin-bottom:16px;">
-        <h3 style="font-family:'Oswald',sans-serif; font-size:18px; color:#fff; margin-bottom:12px;">Колко струва пътна помощ на магистрала в България?</h3>
-        <p style="font-family:'Manrope',sans-serif; font-size:15px; color:#9ca3af; line-height:1.7;">При извънградско репатриране на магистрала, таксата е 0.90€ на изминат километър плюс базовата такса. Точна оферта даваме преди тръгване.</p>
+
+      <div class="faq-item" role="listitem">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-a6">
+          <span class="fq-text">Колко струва пътна помощ на магистрала в България?</span>
+          <span class="fq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer" id="faq-a6" role="region">
+          <div class="faq-answer-inner">
+            При извънградско репатриране на магистрала таксата е
+            <strong style="color:var(--yellow);">0.90€</strong> на изминат километър плюс базовата такса.
+            Точна оферта даваме преди тръгване — свържете се с нас на
+            <a href="tel:+359988885462">0988 885 462</a>.
+          </div>
+        </div>
       </div>
 
     </div>

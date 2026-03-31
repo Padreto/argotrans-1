@@ -78,18 +78,42 @@ img { max-width: 100%; height: auto; }
    URGENCY BANNER – Full-row marquee loop
    ================================================ */
 .urgency-banner {
-  background: #1a0a00;
-  border-bottom: 2px solid var(--yellow);
+  background: linear-gradient(90deg, #1a0a00 0%, #1f0f00 50%, #1a0a00 100%);
+  border-bottom: 1px solid rgba(255,200,0,0.3);
+  border-top: 1px solid rgba(255,200,0,0.1);
   color: var(--yellow);
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   overflow: hidden;
   white-space: nowrap;
-  padding: 7px 0;
+  padding: 10px 0;
   position: relative;
   z-index: 99998;
+}
+
+/* Soft fade edges so text doesn't clip harshly */
+.urgency-banner::before,
+.urgency-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.urgency-banner::before {
+  left: 0;
+  background: linear-gradient(90deg, #1a0a00 0%, transparent 100%);
+}
+
+.urgency-banner::after {
+  right: 0;
+  background: linear-gradient(270deg, #1a0a00 0%, transparent 100%);
 }
 
 .urgency-banner a {
@@ -106,24 +130,34 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 768px) {
   .banner-phone { display: none; }
-  .urgency-banner { font-size: 13px; padding: 6px 0; }
-  .urgency-banner-track { animation: marqueeLoop 20s linear infinite; }
+
+  .urgency-banner {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 8px 0;
+  }
+
+  .urgency-banner::before,
+  .urgency-banner::after {
+    width: 30px;
+  }
 }
 
 .urgency-banner-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: marqueeLoop 35s linear infinite;
+  animation: marqueeLoop 30s linear infinite;
+  will-change: transform;
 }
 
 .urgency-banner-track span {
   display: inline-block;
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
 @keyframes marqueeLoop {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* ================================================
@@ -2368,13 +2402,116 @@ img { max-width: 100%; height: auto; }
   transition: background 0.3s ease;
 }
 
-.faq-item {
-  transition: border-color 0.25s ease, background 0.25s ease;
+/* ================================================
+   FAQ ACCORDION
+   ================================================ */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.faq-item:hover {
-  border-color: rgba(255,200,0,0.2);
-  background: rgba(255,200,0,0.02);
+.faq-accordion-item {
+  border: 1px solid rgba(255,200,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-accordion-item:hover {
+  border-color: rgba(255,200,0,0.35);
+  box-shadow: 0 0 20px rgba(255,200,0,0.05);
+}
+
+.faq-accordion-item.is-open {
+  border-color: rgba(255,200,0,0.4);
+  box-shadow: 0 0 30px rgba(255,200,0,0.08);
+}
+
+.faq-accordion-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  background: #141414;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+  transition: background 0.25s ease;
+}
+
+.faq-accordion-toggle:hover {
+  background: #1a1a1a;
+}
+
+.faq-accordion-toggle:focus-visible {
+  outline: 2px solid #ffc800;
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.faq-accordion-question {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.faq-accordion-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffc800;
+  border: 1px solid rgba(255,200,0,0.25);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.faq-accordion-item.is-open .faq-accordion-icon {
+  transform: rotate(45deg);
+  background: rgba(255,200,0,0.12);
+  border-color: rgba(255,200,0,0.5);
+}
+
+.faq-accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-accordion-item.is-open .faq-accordion-body {
+  grid-template-rows: 1fr;
+}
+
+.faq-accordion-answer {
+  overflow: hidden;
+}
+
+.faq-accordion-answer p {
+  padding: 0 24px 24px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  color: #9ca3af;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
+}
+
+.faq-accordion-item.is-open .faq-accordion-answer p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ================================================
@@ -2393,5 +2530,15 @@ img { max-width: 100%; height: auto; }
 
   .section-divider::before {
     box-shadow: none;
+  }
+
+  .urgency-banner-track {
+    animation: none !important;
+  }
+
+  .faq-accordion-body,
+  .faq-accordion-icon,
+  .faq-accordion-answer p {
+    transition: none !important;
   }
 }
