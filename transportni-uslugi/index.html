@@ -380,87 +380,84 @@
       gap: 22px;
     }
 
-    .cargo-card {
-      background: #141414;
-      border: 1px solid #1d1d1d;
-      border-radius: 3px;
-      padding: 38px 28px 32px;
-      position: relative;
-      overflow: hidden;
-      cursor: default;
+    /* === FLIPPING CARD WRAPPER === */
+    .cargo-flip-wrap {
+      perspective: 1000px;
+      height: 280px;
       opacity: 0;
-      transition:
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+      transform: translateY(30px);
     }
 
-    /* Slide-in directions set by JS */
-    .cargo-card.from-left  { transform: translateX(-60px); }
-    .cargo-card.from-right { transform: translateX(60px); }
-    .cargo-card.slide-in {
+    .cargo-flip-wrap.in-view {
       opacity: 1;
-      transform: translateX(0);
-      transition:
-        opacity 0.65s cubic-bezier(0.22,1,0.36,1),
-        transform 0.65s cubic-bezier(0.22,1,0.36,1),
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+      transform: translateY(0);
+      transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.55s cubic-bezier(0.22,1,0.36,1);
     }
 
-    .cargo-card:hover {
-      border-color: rgba(255,200,0,0.32);
-      background: #191919;
-      box-shadow: 0 0 32px rgba(255,200,0,0.07);
+    .cargo-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
     }
 
-    /* Yellow top accent bar */
-    .cargo-card::before {
-      content: '';
+    .cargo-flip-wrap:hover .cargo-flip-inner,
+    .cargo-flip-wrap.is-flipped .cargo-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .cargo-flip-front,
+    .cargo-flip-back {
       position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--yellow), rgba(255,200,0,0.25));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.35s ease;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 14px;
+      border: 1px solid #1e1e1e;
+      overflow: hidden;
     }
-    .cargo-card:hover::before { transform: scaleX(1); }
 
-    /* Diagonal НАЛИЧНО stamp on hover */
-    .cargo-card::after {
-      content: 'НАЛИЧНО';
-      position: absolute;
-      top: 18px;
-      right: -38px;
-      background: var(--yellow);
-      color: #0a0a0a;
-      font-family: var(--font-heading);
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 500;
-      padding: 5px 46px;
-      transform: rotate(38deg);
-      opacity: 0;
-      transition: opacity 0.25s ease;
-      pointer-events: none;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    /* --- FRONT FACE --- */
+    .cargo-flip-front {
+      background: #141414;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px 24px;
+      transition: border-color 0.3s;
     }
-    .cargo-card:hover::after { opacity: 1; }
 
-    .cargo-card-icon {
-      font-size: 2.9rem;
-      color: var(--yellow);
+    .cargo-flip-wrap:hover .cargo-flip-front {
+      border-color: rgba(255,200,0,0.3);
+    }
+
+    .cargo-flip-front .cf-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,200,0,0.08);
+      border: 1px solid rgba(255,200,0,0.2);
       margin-bottom: 20px;
-      display: block;
-      transition: transform 0.3s ease;
+      font-size: 26px;
+      color: var(--yellow);
+      transition: background 0.3s, border-color 0.3s;
     }
-    .cargo-card:hover .cargo-card-icon { transform: scale(1.1); }
 
-    .cargo-card-title {
+    .cargo-flip-wrap:hover .cf-icon {
+      background: rgba(255,200,0,0.15);
+      border-color: rgba(255,200,0,0.5);
+    }
+
+    .cargo-flip-front .cf-title {
       font-family: var(--font-heading);
-      font-size: 21px;
+      font-size: 20px;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -468,7 +465,7 @@
       padding-bottom: 0;
     }
 
-    .cargo-card-desc {
+    .cargo-flip-front .cf-desc {
       font-family: var(--font-body);
       font-size: 14px;
       color: #6b7280;
@@ -476,24 +473,86 @@
       padding-bottom: 0;
     }
 
-    .cargo-card-id {
-      margin-top: 20px;
+    .cargo-flip-front .cf-hint {
+      position: absolute;
+      bottom: 14px;
       font-family: var(--font-body);
       font-size: 10px;
-      letter-spacing: 2.5px;
-      color: #222;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      border-top: 1px solid #1e1e1e;
-      padding-top: 13px;
-      transition: color 0.3s ease;
+      color: #333;
+      transition: color 0.3s;
     }
-    .cargo-card:hover .cargo-card-id { color: rgba(255,200,0,0.18); }
+
+    .cargo-flip-wrap:hover .cf-hint {
+      color: rgba(255,200,0,0.35);
+    }
+
+    /* --- BACK FACE --- */
+    .cargo-flip-back {
+      background: linear-gradient(145deg, #1a1400 0%, #141414 40%, #141414 100%);
+      border-color: rgba(255,200,0,0.25);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px 28px;
+    }
+
+    .cargo-flip-back .cb-id {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,200,0,0.35);
+      margin-bottom: 16px;
+    }
+
+    .cargo-flip-back .cb-detail {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.75;
+      margin-bottom: 24px;
+      padding-bottom: 0;
+    }
+
+    .cargo-flip-back .cb-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--yellow);
+      color: #0a0a0a;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      min-height: 44px;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+
+    .cargo-flip-back .cb-cta:hover {
+      box-shadow: 0 4px 24px rgba(255,200,0,0.4);
+      transform: translateY(-1px);
+    }
 
     @media (max-width: 768px) {
       .cargo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .cargo-flip-wrap { height: 260px; }
     }
     @media (max-width: 480px) {
       .cargo-grid { grid-template-columns: 1fr; }
+      .cargo-flip-wrap { height: 250px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cargo-flip-inner { transition: none; }
+      .cargo-flip-wrap.in-view { transition: none; }
     }
 
     /* ============================================================
@@ -718,13 +777,6 @@
       background: rgba(255,200,0,0.06);
       box-shadow: 0 0 24px rgba(255,200,0,0.28);
     }
-
-    .ps-step-icon {
-      font-size: 1.5rem;
-      color: #333;
-      transition: color 0.4s ease;
-    }
-    .process-step.in-view .ps-step-icon { color: var(--yellow); }
 
     .ps-content { padding-top: 10px; }
 
@@ -1156,46 +1208,100 @@
 
     <div class="cargo-grid" role="list">
 
-      <div class="cargo-card from-left" role="listitem">
-        <i class="fa-solid fa-pallet cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Палетни товари</h3>
-        <p class="cargo-card-desc">Европалети с материали или продукция.</p>
-        <div class="cargo-card-id">CARGO-001 &middot; PALLET GOODS</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Палетни товари — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-pallet"></i></div>
+            <h3 class="cf-title">Палетни товари</h3>
+            <p class="cf-desc">Европалети с материали или продукция.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-001 &middot; PALLET GOODS</div>
+            <p class="cb-detail">Транспортираме стандартни и нестандартни европалети до 7 тона. Осигуряваме надеждно укрепване и ЧМР застраховка.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cargo-card from-right" role="listitem">
-        <i class="fa-solid fa-hard-hat cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Строителни материали</h3>
-        <p class="cargo-card-desc">Тухли, цимент, арматура, гипсокартон.</p>
-        <div class="cargo-card-id">CARGO-002 &middot; CONSTRUCTION</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Строителни материали — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-hard-hat"></i></div>
+            <h3 class="cf-title">Строителни материали</h3>
+            <p class="cf-desc">Тухли, цимент, арматура, гипсокартон.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-002 &middot; CONSTRUCTION</div>
+            <p class="cb-detail">Доставяме строителни материали директно до обекта. Подходящ за малки и средни строежи в София и страната.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cargo-card from-left" role="listitem">
-        <i class="fa-solid fa-gears cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Техника / Оборудване</h3>
-        <p class="cargo-card-desc">Генератори, компресори, промишлени уреди.</p>
-        <div class="cargo-card-id">CARGO-003 &middot; EQUIPMENT</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Техника и оборудване — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="cf-title">Техника / Оборудване</h3>
+            <p class="cf-desc">Генератори, компресори, промишлени уреди.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-003 &middot; EQUIPMENT</div>
+            <p class="cb-detail">Превозваме тежка техника с хидравлична рампа. Укрепване с колани и осигуровка за всеки тип оборудване.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cargo-card from-right" role="listitem">
-        <i class="fa-solid fa-box cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Контейнери</h3>
-        <p class="cargo-card-desc">Малки товарни и складови контейнери.</p>
-        <div class="cargo-card-id">CARGO-004 &middot; CONTAINERS</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Контейнери — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-box"></i></div>
+            <h3 class="cf-title">Контейнери</h3>
+            <p class="cf-desc">Малки товарни и складови контейнери.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-004 &middot; CONTAINERS</div>
+            <p class="cb-detail">Транспортираме складови и товарни контейнери. Вдигане с лебедка и надеждно позициониране на обекта.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cargo-card from-left" role="listitem">
-        <i class="fa-solid fa-tractor cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Машини</h3>
-        <p class="cargo-card-desc">Мини багер, мотокар, тракторна техника.</p>
-        <div class="cargo-card-id">CARGO-005 &middot; MACHINERY</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Машини — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-tractor"></i></div>
+            <h3 class="cf-title">Машини</h3>
+            <p class="cf-desc">Мини багер, мотокар, тракторна техника.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-005 &middot; MACHINERY</div>
+            <p class="cb-detail">Специализиран превоз на строителна и земеделска техника. Рампа за натоварване и професионално укрепване.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
-      <div class="cargo-card from-right" role="listitem">
-        <i class="fa-solid fa-car cargo-card-icon" aria-hidden="true"></i>
-        <h3 class="cargo-card-title">Превозни средства</h3>
-        <p class="cargo-card-desc">Автомобили, бусове, мотори, ATV/UTV.</p>
-        <div class="cargo-card-id">CARGO-006 &middot; VEHICLES</div>
+      <div class="cargo-flip-wrap" role="listitem" tabindex="0" aria-label="Превозни средства — натиснете за детайли">
+        <div class="cargo-flip-inner">
+          <div class="cargo-flip-front">
+            <div class="cf-icon" aria-hidden="true"><i class="fa-solid fa-car"></i></div>
+            <h3 class="cf-title">Превозни средства</h3>
+            <p class="cf-desc">Автомобили, бусове, мотори, ATV/UTV.</p>
+            <span class="cf-hint" aria-hidden="true">обърни картата</span>
+          </div>
+          <div class="cargo-flip-back">
+            <div class="cb-id">CARGO-006 &middot; VEHICLES</div>
+            <p class="cb-detail">Репатриране и транспорт на МПС до 7 тона. ЧМР застраховка 50 000€ и денонощно обслужване.</p>
+            <a href="tel:+359988885462" class="cb-cta"><i class="fas fa-phone" aria-hidden="true"></i> Поискай оферта</a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1311,7 +1417,6 @@
         </div>
         <div class="ps-node">
           <div class="ps-number">1</div>
-          <i class="fa-solid fa-phone ps-step-icon" aria-hidden="true"></i>
         </div>
         <div class="ps-empty" aria-hidden="true"></div>
       </div>
@@ -1320,7 +1425,6 @@
         <div class="ps-empty" aria-hidden="true"></div>
         <div class="ps-node">
           <div class="ps-number">2</div>
-          <i class="fa-solid fa-clipboard-list ps-step-icon" aria-hidden="true"></i>
         </div>
         <div class="ps-content">
           <h3 class="ps-title">Уточняваме детайлите</h3>
@@ -1335,7 +1439,6 @@
         </div>
         <div class="ps-node">
           <div class="ps-number">3</div>
-          <i class="fa-solid fa-truck ps-step-icon" aria-hidden="true"></i>
         </div>
         <div class="ps-empty" aria-hidden="true"></div>
       </div>
@@ -1344,7 +1447,6 @@
         <div class="ps-empty" aria-hidden="true"></div>
         <div class="ps-node">
           <div class="ps-number">4</div>
-          <i class="fa-solid fa-circle-check ps-step-icon" aria-hidden="true"></i>
         </div>
         <div class="ps-content">
           <h3 class="ps-title">Доставка</h3>
@@ -1634,11 +1736,26 @@
     observe('.tu-section-sub',    function (el) { el.classList.add('in-view'); });
 
     /* -------------------------------------------------------
-       SECTION 2 — CARGO CARDS (alternating slide from sides)
+       SECTION 2 — CARGO FLIP CARDS (staggered fade-in + tap toggle for mobile)
        ------------------------------------------------------- */
-    observe('.cargo-card', function (el) {
-      el.classList.add('slide-in');
-    }, { threshold: 0.12 });
+    var cargoWraps = document.querySelectorAll('.cargo-flip-wrap');
+    cargoWraps.forEach(function (wrap, i) {
+      // Staggered reveal on scroll
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function () { wrap.classList.add('in-view'); }, i * 80);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      obs.observe(wrap);
+
+      // Tap toggle for mobile (hover doesn't work on touch)
+      wrap.addEventListener('click', function () {
+        wrap.classList.toggle('is-flipped');
+      });
+    });
 
     /* -------------------------------------------------------
        SECTION 3 — SPECS
